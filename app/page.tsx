@@ -8,7 +8,7 @@ export default function Home() {
       </header>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div className="flex flex-col gap-8 items-center">
-          <div className="rounded-full w-48 h-48 bg-[#e590ab]"></div>
+          <div className="rounded-full w-48 h-48 bg-red-200"></div>
           <div className="flex flex-col gap-2">
             <div className="text-center">Ruby Chen</div>
             <div className="text-center">This is a place to let me practice web skill.</div>

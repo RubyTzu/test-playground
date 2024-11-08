@@ -1,57 +1,190 @@
+"use client";
 import Link from "next/link";
-// import clsx from "clsx";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { spring } from "framer-motion/dom";
 
-export function Navbar() {
+interface Route {
+  title: string;
+  href: string;
+}
+
+interface SocialMedia {
+  title: string;
+  href: string;
+  icon: string;
+}
+
+const routes: Route[] = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Project",
+    href: "/project",
+  },
+  {
+    title: "Article",
+    href: "/article",
+  },
+];
+
+const socialMedia: SocialMedia[] = [
+  {
+    title: "GH",
+    href: "https://github.com/",
+    icon: "bg-red-100",
+  },
+  {
+    title: "LI",
+    href: "https://tw.linkedin.com",
+    icon: "bg-red-200",
+  },
+  {
+    title: "BH",
+    href: "https://www.behance.net",
+    icon: "bg-red-300",
+  },
+];
+
+export const Navbar = () => {
   return (
     <div>
-      <div className="hidden justify-between items-center md:flex">
-        <div className="w-fit flex gap-5 h-fit">
-          <Link href="/">home</Link>
-          <Link href="/about">about</Link>
-          <Link href="/project">project</Link>
-          <Link href="/article">article</Link>
-        </div>
-        <div className="w-fit flex gap-5  h-fit">
-          <div className="rounded-full w-8 h-8 bg-slate-100" />
-          <div className="rounded-full w-8 h-8 bg-slate-200" />
-          <div className="rounded-full w-8 h-8 bg-slate-300" />
-          <div className="rounded-full w-8 h-8 bg-slate-400" />
-        </div>
-      </div>
-      {/* <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-0 dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
-            <span className="sr-only">Open main menu</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-          </button>
-          <div className="w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4   rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 ">
-              <li>
-                <Link href="/" className="block py-2 px-3 text-gray-900 font-[600] rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">
-                  home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="block py-2 px-3 text-gray-900 font-[400] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                  about
-                </Link>
-              </li>
-              <li>
-                <Link href="/project" className="block py-2 px-3 text-gray-900 font-[400] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                  project
-                </Link>
-              </li>
-              <li>
-                <Link href="/article" className="block py-2 px-3 text-gray-900 font-[400] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                  article
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav> */}
+      <NavDesktop />
+      <NavMobile />
     </div>
   );
-}
+};
+
+const NavDesktop = () => {
+  return (
+    <div className="hidden justify-between items-center md:flex">
+      <div className="w-fit flex gap-5 h-fit">
+        {routes.map((site: Route) => (
+          <Link key={site.title} href={site.href}>
+            {site.title}
+          </Link>
+        ))}
+      </div>
+      <div className="w-fit flex items-center gap-5 h-fit">
+        {socialMedia.map((icon: SocialMedia) => (
+          <Link target="_blank" key={icon.title} href={icon.href}>
+            <div className={`rounded-full flex justify-center items-center w-8 h-8 ${icon.icon}`}>
+              <div className="font-semibold text-xs text-white">{icon.title}</div>
+            </div>
+          </Link>
+        ))}
+        <div className="">
+          <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
+          <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const NavMobile = () => {
+  const [isOpen, setOpen] = useState(false);
+  const variant = isOpen ? "opened" : "closed";
+  const mobileMenuVariant = {
+    closed: {
+      x: "-45%",
+      y: "-45%",
+      scale: 0,
+      transition: {
+        duration: 0.33,
+        ease: [0.74, 0, 0.19, 1.02],
+      },
+    },
+    opened: {
+      x: "0%",
+      y: "0%",
+      scale: 1,
+      transition: {
+        duration: 0.33,
+        ease: [0.74, 0, 0.19, 1.02],
+      },
+    },
+  };
+  const top = {
+    closed: {
+      rotate: 0,
+      translateY: 0,
+    },
+    opened: {
+      rotate: 45,
+      translateY: 1.5,
+    },
+  };
+  const center = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+  const bottom = {
+    closed: {
+      rotate: 0,
+      translateY: 0,
+    },
+    opened: {
+      rotate: -45,
+      translateY: -1.5,
+    },
+  };
+
+  const lineprops: any = {
+    stroke: "#b91c1c",
+    strokeWidth: 2,
+    vectorEffect: "non-scaling-stroke",
+    initial: "closed",
+    animate: variant,
+    transition: spring,
+    lineprops: null,
+  };
+
+  const unitHeight = 4;
+  const unitWidth = (unitHeight * 24) / 24;
+  return (
+    <div className="relative md:hidden">
+      <div className="absolute right-0">
+          <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
+          <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
+      </div>
+      <div className="absolute z-40 w-fit" onClick={() => setOpen(!isOpen)}>
+        <motion.svg viewBox={`0 0 ${unitWidth} ${unitHeight}`} overflow="visible" preserveAspectRatio="none" width={24} height={24}>
+          <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="0" y2="0" variants={top} {...lineprops} />
+          <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="1.5" y2="1.5" variants={center} {...lineprops} />
+          <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="3" y2="3" variants={bottom} {...lineprops} />
+        </motion.svg>
+      </div>
+      <motion.div variants={mobileMenuVariant} animate={variant} className="z-0 fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-gray-50/95">
+        <div className="w-fit">
+          {routes.map((site: Route) => (
+            <div key={site.title}>
+              <Link href={site.href} className="font-medium block py-4 px-3 text-gray-900" onClick={() => setOpen(!isOpen)}>
+                {site.title}
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="w-fit flex gap-5 h-fit">
+          {socialMedia.map((icon: SocialMedia) => (
+            <Link target="_blank" key={icon.title} href={icon.href}>
+              <div className={`rounded-full flex justify-center items-center w-16 h-16 ${icon.icon}`}>
+                <div className="font-semibold text-xs text-white">{icon.title}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  );
+};
