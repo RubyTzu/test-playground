@@ -1,21 +1,17 @@
+"use client";
 import { Navbar } from "./(ui)/shareComponent/Navbar";
+import { Footer } from "./(ui)/shareComponent/Footer";
+import { Intro } from "./(ui)/home/Intro";
+import { motion } from "motion/react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <header className="w-full">
-        <Navbar />
-      </header>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="flex flex-col gap-8 items-center">
-          <div className="rounded-full w-48 h-48 bg-red-200"></div>
-          <div className="flex flex-col gap-2">
-            <div className="text-center">Ruby Chen</div>
-            <div className="text-center">This is a place to let me practice web skill.</div>
-          </div>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">footer</footer>
+    <div className="grid grid-rows-[8rem_1fr_6rem] min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
+      <Navbar />
+      <motion.main className="max-w-[1440px] mx-auto flex flex-col gap-4 row-start-2 items-center justify-center">
+        <Intro />
+      </motion.main>
+      <Footer />
     </div>
   );
 }
