@@ -56,7 +56,7 @@ const socialMedia: SocialMedia[] = [
 
 export const Navbar = () => {
   return (
-    <header className="w-full px-10 pt-12">
+    <header className="w-screen px-10 pt-12">
       <NavDesktop />
       <NavMobile />
     </header>
