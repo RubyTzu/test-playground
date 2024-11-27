@@ -3,7 +3,8 @@ import { AboutMe } from "@/app/(ui)/about/AboutMe";
 import { Skills } from "@/app/(ui)/about/Skill";
 import { Experience } from "@/app/(ui)/about/Experience";
 import { Footer } from "@/app/(ui)/shareComponent/Footer";
-
+import { Education } from "@/app/(ui)/about/Education";
+import { BackToTopButton } from "@/app/(ui)/shareComponent/BackToTopBtn";
 
 export default function page() {
   return (
@@ -13,6 +14,8 @@ export default function page() {
         <AboutMe />
         <Skills />
         <Experience />
+        <Education />
+        <BackToTopButton />
       </main>
       <Footer />
     </div>

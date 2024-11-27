@@ -2,12 +2,7 @@
 import { useRef } from "react";
 import { useInView, motion } from "motion/react";
 import { SectionTitle } from "@/app/(ui)/shareComponent/SectionTitle";
-
-interface Title {
-  id: string;
-  title: string;
-  level: string;
-}
+import { Title } from "@/app/(data)/types";
 
 const skillTitle: Title[] = [
   {
@@ -90,7 +85,7 @@ const Skill = ({ id, title, lineWidth }: { id: string; title: string; lineWidth:
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const lineRef = useRef(null);
-  const isLineInView = useInView(lineRef, { once: true });
+  const isLineInView = useInView(lineRef, { once: false });
 
   return (
     <motion.div
