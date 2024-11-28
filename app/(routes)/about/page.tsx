@@ -10,7 +10,7 @@ export default function page() {
   return (
     <div className="grid grid-rows-[8rem_1fr_6rem] min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
       <Navbar />
-      <main className="mx-auto max-w-[1240px] px-20 flex flex-col gap-96 row-start-2">
+      <main className="mx-auto w-screen px-20 flex flex-col gap-96 row-start-2 md:max-w-[1240px]">
         <AboutMe />
         <Skills />
         <Experience />

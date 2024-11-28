@@ -56,7 +56,7 @@ const socialMedia: SocialMedia[] = [
 
 export const Navbar = () => {
   return (
-    <header className="max-w-screen px-10 pt-12">
+    <header className="w-screen px-10 pt-12">
       <NavDesktop />
       <NavMobile />
     </header>
@@ -67,7 +67,7 @@ const NavDesktop = () => {
     const pathname = usePathname();
 
   return (
-    <div className="mx-auto max-w-[1440px] hidden justify-between items-center md:flex">
+    <div className="mx-auto max-w-[1200px] hidden justify-between items-center md:flex">
       <div className="w-fit flex gap-5 h-fit">
         {routes.map((site: Route) => (
           <Link className="relative" key={site.title} href={site.href}>
