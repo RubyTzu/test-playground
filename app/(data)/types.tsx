@@ -8,3 +8,11 @@ export interface Item {
   description: string;
   id: number;
 }
+
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  time: string;
+  img: string;
+}

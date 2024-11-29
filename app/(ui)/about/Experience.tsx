@@ -15,8 +15,10 @@ items.reverse();
 
 export const Experience = () => {
 return (
-  <div>
-    <SectionTitle>Experience</SectionTitle>
+  <div className="relative">
+    <div className="z-20 sticky top-0 bg-white">
+      <SectionTitle>Experience</SectionTitle>
+    </div>
     <HorizenScrollItems items={items} />
   </div>
 );

@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 
 export const Intro = () => {
     return(<>
-    <div className="pt-32 flex flex-col gap-8 items-center">
+    <div className="pt-20 flex flex-col gap-8 items-center">
           <motion.div
             className="w-48 h-48 rounded-full bg-red-200"
             initial={{ opacity: 0, scale: 0.5 }}

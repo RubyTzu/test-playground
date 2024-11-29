@@ -25,8 +25,8 @@ export const HorizenScrollItems = ({ items }: { items: Item[] }) => {
   const xPosition = useParallax(scrollYProgress, `${items.length - 1}00`);
 
   return (
-    <motion.section ref={sectionRef} className="max-w-[80svw] relative h-[400vh]">
-      <ul className="flex sticky top-64 overflow-hidden">
+    <motion.section ref={sectionRef} className="z-10 max-w-[80svw] relative h-[400vh]">
+      <ul className="flex sticky top-36 overflow-hidden">
         {items.map((item) => (
           <Card title={item.title} description={item.description} id={item.id} xPosition={xPosition} key={item.id} />
         ))}
