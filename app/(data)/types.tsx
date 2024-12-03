@@ -16,3 +16,13 @@ export interface Project {
   time: string;
   img: string;
 }
+
+export interface ProjectDetails extends Project {
+  longDescription: string;
+  brainStormingDescription: string;
+  makingDescription: string;
+  outComeDescription: string;
+  brainStormingImg: string[];
+  makingImg: string;
+  outComeImg: string;
+}

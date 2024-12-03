@@ -1,12 +1,19 @@
-import { Project } from "./types";
+import { ProjectDetails } from "./types";
 
-export const projectDatas: Project[] = [
+const projectDatas: ProjectDetails[] = [
   {
     id: 1,
     title: "Ocean",
     description: "I love this work so much, so proud to be involve in this project.",
     time: "2021",
     img: "bg-red-100",
+    longDescription: "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 1.",
+    brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 1.",
+    makingDescription: "making is where magic happened 1.",
+    outComeDescription: "appreciate for any help 1.",
+    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
+    makingImg: "bg-red-200",
+    outComeImg: "bg-red-100",
   },
   {
     id: 2,
@@ -14,6 +21,13 @@ export const projectDatas: Project[] = [
     description: "Surely teach me how to write code.",
     time: "2023",
     img: "bg-red-200",
+    longDescription: "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 2.",
+    brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 2.",
+    makingDescription: "making is where magic happened 2.",
+    outComeDescription: "appreciate for any help 2.",
+    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
+    makingImg: "bg-red-200",
+    outComeImg: "bg-red-100",
   },
   {
     id: 3,
@@ -21,6 +35,13 @@ export const projectDatas: Project[] = [
     description: "A little project that I joint.",
     time: "2024",
     img: "bg-red-300",
+    longDescription: "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 3.",
+    brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 3.",
+    makingDescription: "making is where magic happened 3.",
+    outComeDescription: "appreciate for any help 3.",
+    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
+    makingImg: "bg-red-200",
+    outComeImg: "bg-red-100",
   },
   {
     id: 4,
@@ -28,6 +49,13 @@ export const projectDatas: Project[] = [
     description: "Small little project.",
     time: "2024",
     img: "bg-red-200",
+    longDescription: "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 4.",
+    brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 4.",
+    makingDescription: "making is where magic happened 4.",
+    outComeDescription: "appreciate for any help 4.",
+    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
+    makingImg: "bg-red-200",
+    outComeImg: "bg-red-100",
   },
   {
     id: 5,
@@ -35,5 +63,16 @@ export const projectDatas: Project[] = [
     description: "This is my fifth work, I truly admire the people who work with me in this project.",
     time: "2024",
     img: "bg-red-100",
+    longDescription: "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 5.",
+    brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 5.",
+    makingDescription: "making is where magic happened 5.",
+    outComeDescription: "appreciate for any help 5.",
+    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
+    makingImg: "bg-red-200",
+    outComeImg: "bg-red-100",
   },
 ];
+
+projectDatas.reverse();
+
+export { projectDatas };
