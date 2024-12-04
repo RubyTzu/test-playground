@@ -15,7 +15,7 @@ export const ProjectIntro = ({projectData}:{projectData: ProjectDetails}) => {
           </motion.div>
         </div>
       </div>
-      <div className="mt-24 w-full h-72 bg-red-200"></div>
+      <div className={`mt-24 w-full h-72 ${projectData.longImg}`}></div>
       <div className="mt-14 text-center leading-6">{projectData.longDescription}</div>
     </div>
   );

@@ -6,7 +6,7 @@ import { projectDatas } from "@/app/(data)/dummyData";
 
 export const ProjectCards = () => {
   return (
-    <div className="pt-20 grid gap-96 grid-cols-1">
+    <div className="pt-36 grid gap-96 grid-cols-1">
       {projectDatas.map((projectData) => {
         return <ProjectCard projectData={projectData} key={projectData.id}/>;
       })}

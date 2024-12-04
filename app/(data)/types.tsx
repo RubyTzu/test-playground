@@ -18,6 +18,7 @@ export interface Project {
 }
 
 export interface ProjectDetails extends Project {
+  longImg: string;
   longDescription: string;
   brainStormingDescription: string;
   makingDescription: string;
