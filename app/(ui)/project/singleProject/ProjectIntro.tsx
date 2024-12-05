@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ProjectDetails } from "@/app/(data)/types";
+import Image from "next/image";
 
 export const ProjectIntro = ({projectData}:{projectData: ProjectDetails}) => {
   return (
@@ -15,7 +16,7 @@ export const ProjectIntro = ({projectData}:{projectData: ProjectDetails}) => {
           </motion.div>
         </div>
       </div>
-      <div className={`mt-24 w-full h-72 ${projectData.longImg}`}></div>
+      <Image src={projectData.longImg} width={1920} height={1080} alt="test image" className="mt-24 w-full h-72 object-cover border"></Image>
       <div className="mt-14 text-center leading-6">{projectData.longDescription}</div>
     </div>
   );

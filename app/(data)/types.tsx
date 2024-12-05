@@ -15,6 +15,7 @@ export interface Project {
   description: string;
   time: string;
   img: string;
+  gif: string;
 }
 
 export interface ProjectDetails extends Project {

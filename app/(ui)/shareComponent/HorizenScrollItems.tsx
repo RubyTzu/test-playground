@@ -53,7 +53,6 @@ export const HorizenScrollItems = ({ items }: { items: Item[] }) => {
   }, []);
 
 
-console.log(`${items.length - 1}00`);
   return (
     <div className="relative">
       <motion.section ref={sectionRef} className="max-w-[80svw] relative h-[400vh]">

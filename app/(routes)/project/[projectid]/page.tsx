@@ -11,11 +11,11 @@ export default function Page() {
   const projectData: ProjectDetails = projectDatas.filter((project) => project.id === Number(projectid))[0];
 
   return (
-      <main className="mx-auto w-screen px-20 flex flex-col gap-80 row-start-2 md:max-w-[1240px]">
+        <div className="flex flex-col gap-80">
         <ProjectIntro projectData={projectData} />
         <ProjectThreePictures projectData={projectData} title="- Brainstorming" />
         <ProjectOnePicture projectData={projectData} title={"- Making"} />
         <ProjectOnePicture projectData={projectData} title={"- Outcome"} />
-      </main>
+      </div>
   );
 }

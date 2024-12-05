@@ -71,7 +71,7 @@ const NavDesktop = () => {
       <div className="w-fit flex gap-5 h-fit">
         {routes.map((site: Route) => (
           <Link className="relative" key={site.title} href={site.href}>
-            <motion.div whileHover={{ borderBottom: "1.1" }} className="relative bottom-[-5px] w-full  border-black">
+            <motion.div className="relative bottom-[-5px] w-full  border-black">
               {site.title}
               {site.href === pathname ? <motion.div className="absolute bottom-[-1px] left-0 right-0 h-[1px] bg-red-500 w-full" layoutId="underline" /> : null}
             </motion.div>
@@ -165,14 +165,14 @@ const NavMobile = () => {
         <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
         <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
       </Link>
-      <div className="absolute z-40 w-fit" onClick={() => setOpen(!isOpen)}>
+      <div className="absolute z-50 w-fit" onClick={() => setOpen(!isOpen)}>
         <motion.svg viewBox={`0 0 ${unitWidth} ${unitHeight}`} overflow="visible" preserveAspectRatio="none" width={24} height={24}>
           <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="0" y2="0" variants={top} {...lineprops} />
           <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="1.5" y2="1.5" variants={center} {...lineprops} />
           <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="3" y2="3" variants={bottom} {...lineprops} />
         </motion.svg>
       </div>
-      <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="z-10 fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-gray-50/95">
+      <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="z-40 fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-gray-50/95">
         <div className="w-fit">
           {routes.map((site: Route) => (
             <div key={site.title}>

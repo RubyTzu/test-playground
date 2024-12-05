@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "./(ui)/shareComponent/Navbar";
 import { Footer } from "./(ui)/shareComponent/Footer";
 import { BackToTopButton } from "./(ui)/shareComponent/BackToTopBtn";
+import { MainContainer } from "./(ui)/shareComponent/MainContainer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="grid grid-rows-[8rem_1fr_6rem] min-h-screen font-[family-name:var(--font-geist-sans)]">
           <Navbar />
-          {children}
+          <MainContainer>
+              {children}
+           </MainContainer>
           <Footer />
           <BackToTopButton />
         </div>

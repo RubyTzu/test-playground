@@ -5,11 +5,11 @@ import { Education } from "@/app/(ui)/about/Education";
 
 export default function page() {
   return (
-      <main className="mx-auto w-screen px-20 flex flex-col gap-96 row-start-2 md:max-w-[1240px]">
+    <div className="w-full flex flex-col gap-96">
         <AboutMe />
         <Skills />
         <Experience />
         <Education />
-      </main>
+      </div>
   );
 }

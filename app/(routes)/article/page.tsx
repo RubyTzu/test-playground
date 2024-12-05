@@ -1,19 +1,12 @@
 "use client";
-import { motion } from "motion/react";
+
+import { TestPlayer } from "@/app/(ui)/shareComponent/TestPlayer";
 
 export default function Page() {
+
   return (
-      <main className="bg-slate-400 flex flex-col gap-4 row-start-2 justify-center items-center">
-        <motion.div className="h-5 w-5 bg-black" animate={{ x: 100 }} transition={{ duration: 0.3, ease: "linear" }} />
-        <motion.div
-          className="w-48 h-48 rounded-full bg-red-200"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        />
-      </main>
+    <div>
+      <TestPlayer />
+    </div>
   );
 }
