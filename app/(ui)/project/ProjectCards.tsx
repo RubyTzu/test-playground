@@ -25,7 +25,7 @@ const ProjectCard = ({ projectData }: { projectData: Project }) => {
   };
 
   return (
-    <div ref={ref} className="grid gap-10 grid-cols-6">
+    <div id={String(projectData.id)} ref={ref} className="grid gap-10 grid-cols-6 scroll-mt-64">
       <motion.div onClick={handleClick} initial={{ translateY: -10, opacity: 0, scale: 0.99 }} animate={{ translateY: isInView ? 0 : -10, opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.99 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="col-span-3 overflow-hidden border cursor-pointer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <motion.img
           whileHover={{

@@ -38,7 +38,7 @@ export const Intro = () => {
             }}>
             This is a place to let me practice web skill.
           </motion.div>
-          <Link href="/" className="mt-4 text-center">
+          <Link href="/" target="_blank" className="mt-4 text-center">
             &#47;&#42; Resume &#42;&#47;
           </Link>
         </div>

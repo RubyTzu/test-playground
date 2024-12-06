@@ -5,6 +5,7 @@ import { ProjectThreePictures } from "@/app/(ui)/project/singleProject/ProjecThr
 import { ProjectOnePicture } from "@/app/(ui)/project/singleProject/ProjectOnePicture";
 import { projectDatas } from "@/app/(data)/dummyData";
 import { ProjectDetails } from "@/app/(data)/types";
+import { ProjectOneVideo } from "@/app/(ui)/project/singleProject/ProjectOneVideo";
 
 export default function Page() {
   const { projectid } = useParams<{ projectid: string }>();
@@ -15,7 +16,7 @@ export default function Page() {
         <ProjectIntro projectData={projectData} />
         <ProjectThreePictures projectData={projectData} title="- Brainstorming" />
         <ProjectOnePicture projectData={projectData} title={"- Making"} />
-        <ProjectOnePicture projectData={projectData} title={"- Outcome"} />
+        <ProjectOneVideo projectData={projectData} title={"- Outcome"} />
       </div>
   );
 }

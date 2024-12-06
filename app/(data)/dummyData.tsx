@@ -16,6 +16,9 @@ const projectDatas: ProjectDetails[] = [
     brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
     makingImg: "bg-red-200",
     outComeImg: "bg-red-100",
+    videoImg: "/images/TEST_YOUTUBE.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
+    demoUrl: "/",
   },
   {
     id: 2,
@@ -32,6 +35,9 @@ const projectDatas: ProjectDetails[] = [
     brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
     makingImg: "bg-red-200",
     outComeImg: "bg-red-100",
+    videoImg: "/images/TEST2_YOUTUBE.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
+    demoUrl: "/",
   },
   {
     id: 3,
@@ -48,6 +54,9 @@ const projectDatas: ProjectDetails[] = [
     brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
     makingImg: "bg-red-200",
     outComeImg: "bg-red-100",
+    videoImg: "/images/TEST3_YOUTUBE.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
+    demoUrl: "/",
   },
   {
     id: 4,
@@ -64,6 +73,9 @@ const projectDatas: ProjectDetails[] = [
     brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
     makingImg: "bg-red-200",
     outComeImg: "bg-red-100",
+    videoImg: "/images/TEST4_YOUTUBE.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
+    demoUrl: "/",
   },
   {
     id: 5,
@@ -80,6 +92,9 @@ const projectDatas: ProjectDetails[] = [
     brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
     makingImg: "bg-red-200",
     outComeImg: "bg-red-100",
+    videoImg: "/images/TEST5_YOUTUBE.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
+    demoUrl: "https://cost-sharing-app-git-staging-samchlius-projects.vercel.app/",
   },
 ];
 

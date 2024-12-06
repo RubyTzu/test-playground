@@ -27,4 +27,7 @@ export interface ProjectDetails extends Project {
   brainStormingImg: string[];
   makingImg: string;
   outComeImg: string;
+  videoImg: string;
+  videoUrl: string;
+  demoUrl: string;
 }
