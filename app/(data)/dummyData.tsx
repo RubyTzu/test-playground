@@ -1,4 +1,4 @@
-import { ProjectDetails } from "./types";
+import { ProjectDetails, Article } from "./types";
 
 const projectDatas: ProjectDetails[] = [
   {
@@ -100,4 +100,15 @@ const projectDatas: ProjectDetails[] = [
 
 projectDatas.reverse();
 
-export { projectDatas };
+const articleDatas: Article[] = [
+  { id: 1, title: "Article 1", description: "Description about this article to make it look good. Description about this article to make it look good.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: true },
+  { id: 2, title: "Article 2", description: "Description about this article to make it look good 2. Description about this article to make it look good 2.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: true },
+  { id: 3, title: "Article 3", description: "Description about this article to make it look good 3. Description about this article to make it look good 3.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: true },
+  { id: 4, title: "Article 4", description: "Description about this article to make it look good 4. Description about this article to make it look good 4.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: false },
+  { id: 5, title: "Article 5", description: "Description about this article to make it look good 5. Description about this article to make it look good 5.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: false },
+  { id: 6, title: "Article 6", description: "Description about this article to make it look good 6. Description about this article to make it look good 6.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: false },
+  { id: 7, title: "Article 7", description: "Description about this article to make it look good 7. Description about this article to make it look good 7.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: false },
+  { id: 8, title: "Article 8", description: "Description about this article to make it look good 8. Description about this article to make it look good 8.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: false },
+];
+
+export { projectDatas, articleDatas };

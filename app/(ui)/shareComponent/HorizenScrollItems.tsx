@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, MotionValue, spring, cubicBezier, useSpring } from "motion/react";
+import { motion, useScroll, useTransform, MotionValue, useSpring } from "motion/react";
 import { Item } from "@/app/(data)/types";
 
 function useParallax(value: MotionValue<number>, distance: string) {

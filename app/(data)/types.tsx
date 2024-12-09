@@ -31,3 +31,12 @@ export interface ProjectDetails extends Project {
   videoUrl: string;
   demoUrl: string;
 }
+
+export interface Article {
+  id: number;
+  title: string;
+  description: string;
+  img: string;
+  date: string;
+  isMain: boolean;
+}
