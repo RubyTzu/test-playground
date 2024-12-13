@@ -4,7 +4,6 @@ import { articleDatas } from "@/app/(data)/dummyData";
 import { Article } from "@/app/(data)/types";
 import { MainArticle } from "@/app/(ui)/article/MainArticle";
 import { SubArticle } from "@/app/(ui)/article/SubArticle";
-import { TestComponent } from "@/app/(ui)/shareComponent/TestComponent";
 
 export default function Page() {
 
@@ -13,7 +12,6 @@ const subArticleDatas = articleDatas.filter((article)=> article.isMain !== true)
 
   return (
     <>
-    <TestComponent />
       <div className="flex flex-col justify-start items-start w-full mb-32">
         {mainArticleDatas.map((articleData: Article) => {
           return <MainArticle key={articleData.id} articleData={articleData} />;
