@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 
 export const ProjectCards = () => {
   return (
-    <div className="pt-36 grid gap-96 grid-cols-1">
+    <div className="pt-4 grid gap-36 grid-cols-1 md:pt-36 md:gap-96">
       {projectDatas.map((projectData) => {
         return <ProjectCard projectData={projectData} key={projectData.id} />;
       })}
@@ -25,7 +25,7 @@ const ProjectCard = ({ projectData }: { projectData: Project }) => {
   };
 
   return (
-    <div id={String(projectData.id)} ref={ref} className="grid gap-10 grid-cols-6 scroll-mt-64">
+    <div id={String(projectData.id)} ref={ref} className="grid gap-10 grid-cols-1 scroll-mt-32 md:grid-cols-6 md:scroll-mt-64">
       <motion.div onClick={handleClick} initial={{ translateY: -10, opacity: 0, scale: 0.99 }} animate={{ translateY: isInView ? 0 : -10, opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.99 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="col-span-3 overflow-hidden border cursor-pointer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <motion.img
           whileHover={{
@@ -38,9 +38,9 @@ const ProjectCard = ({ projectData }: { projectData: Project }) => {
           alt="test image"
           className="h-64 object-cover"></motion.img>
       </motion.div>
-      <motion.div initial={{ translateX: 10, opacity: 0, scale: 0.99 }} animate={{ translateX: isInView ? 0 : 10, opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.99 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="col-span-3 flex flex-col justify-end items-end text-right">
-        <div className="text-lg font-semibold">{projectData.title}</div>
-        <div className="mb-10">{projectData.description}</div>
+      <motion.div initial={{ translateX: 10, opacity: 0, scale: 0.99 }} animate={{ translateX: isInView ? 0 : 10, opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.99 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="col-span-3 flex flex-col  md:justify-end items-end text-right">
+        <div className="text-lg font-semibold text-left md:text-right w-full">{projectData.title}</div>
+        <div className="mb-10 text-left md:text-right w-full">{projectData.description}</div>
         <div onClick={handleClick} className="border-b-red-400 border-b-2 cursor-pointer">
           Learn More
         </div>

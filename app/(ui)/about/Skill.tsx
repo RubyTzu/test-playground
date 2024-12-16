@@ -70,13 +70,12 @@ const skillTitle: Title[] = [
 export const Skills = () => {
   return (
     <div>
-     <SectionTitle>Skills</SectionTitle> 
-      <div className="grid gap-4 grid-cols-6">
+      <SectionTitle>Skills</SectionTitle>
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-6">
         {skillTitle.map((skill: any) => {
           return <Skill key={skill.id} id={skill.id} title={skill.title} lineWidth={skill.level} />;
         })}
       </div>
-     
     </div>
   );
 };

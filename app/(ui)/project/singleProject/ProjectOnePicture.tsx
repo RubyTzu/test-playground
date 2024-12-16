@@ -7,7 +7,7 @@ export const ProjectOnePicture = ({ projectData, title }: { projectData: Project
       {title === "- Making" ? (
         <>
           <div>{projectData.makingDescription}</div>
-           <div className={`mt-12 w-[80%] mx-auto h-96 ${projectData.makingImg}`}></div>
+          <div className={`mt-12 w-full h-64 mx-auto md:h-96 md:w-[80%] ${projectData.makingImg}`}></div>
         </>
       ) : null}
     </div>

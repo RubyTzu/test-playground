@@ -10,9 +10,9 @@ function useParallax(value: MotionValue<number>, distance: string) {
 function Card({ title, description, id, xPosition }: { title: string; description: string; id: number; xPosition: MotionValue<string> }) {
   return (
     <motion.li style={{ x: xPosition }} className="flex w-full items-center justify-center flex-col">
-      <div className="w-[1200px] h-[400px] flex flex-col items-center justify-center">
-        <div className=" text-2xl mb-5">{title}</div>
-        <div className=" text-base mx-64 text-center">{description}</div>
+      <div className="w-[1200px] h-[300px] flex flex-col items-center justify-center md:h-[400px]">
+        <div className="text-2xl mb-5">{title}</div>
+        <div className="text-base mx-64 w-48 text-center md:w-fit">{description}</div>
       </div>
       <h3 className="text-2xl text-slate-500">{`#${id}`}</h3>
     </motion.li>
@@ -60,8 +60,8 @@ export const HorizenScrollItems = ({ items }: { items: Item[] }) => {
       <motion.section ref={sectionRef} className="max-w-[80svw] relative h-[400vh]">
         {isInView && (
           <>
-            <motion.div className="fixed bottom-[80px] left-96 right-96  bg-slate-200 origin-[0%] h-[5px]" style={{ scaleX, zIndex: "3" }} />
-            <div style={{ zIndex: "2" }} className="fixed bottom-[80px] left-96 right-96 bg-red-200 h-[5px]"></div>
+            <motion.div className="fixed bottom-[150px] left-16 right-16 md:left-96 md:right-96  bg-slate-200 origin-[0%] h-[5px] md:bottom-[80px]" style={{ scaleX, zIndex: "3" }} />
+            <div style={{ zIndex: "2" }} className="fixed bottom-[150px] left-16 right-16 md:left-96 md:right-96 bg-red-200 h-[5px] md:bottom-[80px]"></div>
           </>
         )}
         <ul className="z-10 flex sticky top-36 overflow-hidden bg-white">

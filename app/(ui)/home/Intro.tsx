@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Intro = () => {
   return (
     <>
-      <div className="mt-36 mb-80 flex flex-col gap-8 items-center">
+      <div className="mt-16 mb-80 flex flex-col gap-8 items-center md:mt-36">
         <motion.div
           className="w-48 h-48 rounded-full bg-red-200"
           initial={{ opacity: 0, scale: 0.5 }}

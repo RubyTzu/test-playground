@@ -17,7 +17,7 @@ const subArticleDatas = articleDatas.filter((article)=> article.isMain !== true)
           return <MainArticle key={articleData.id} articleData={articleData} />;
         })}
       </div>
-      <div className="flex flex-col justify-start items-start w-full mb-64">
+      <div className="flex flex-col justify-start items-start w-full mb-32 md:mb-64">
         {subArticleDatas.map((articleData: Article) => {
           return <SubArticle key={articleData.id} articleData={articleData} />;
         })}
