@@ -60,7 +60,7 @@ const projectDatas: ProjectDetails[] = [
   },
   {
     id: 4,
-    title: "Sizing Kit Store Location",
+    title: "Store Location",
     description: "Small little project.",
     time: "2024",
     img: "/images/TEST4_JPG.jpg",
@@ -75,7 +75,7 @@ const projectDatas: ProjectDetails[] = [
     outComeImg: "bg-red-100",
     videoImg: "/images/TEST4_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
-    demoUrl: "/",
+    demoUrl: "https://table-store-iota.vercel.app/",
   },
   {
     id: 5,
