@@ -7,7 +7,7 @@ import Image from "next/image";
 export const ProjectIntro = ({projectData}:{projectData: ProjectDetails}) => {
 
   return (
-    <div className="mt-2">
+    <div className="mt-0 xl:mt-2">
       <div className="flex flex-col justify-between items-end md:items-center md:flex-row">
         <div className="text-3xl font-semibold w-full">{projectData.title}</div>
         <div className="flex gap-6 pt-5 md:gap-4 md:pt-0">
@@ -17,7 +17,7 @@ export const ProjectIntro = ({projectData}:{projectData: ProjectDetails}) => {
           </motion.div>
         </div>
       </div>
-      <Image src={projectData.longImg} width={1920} height={1080} alt="test image" className="mt-16 w-full h-72 object-cover border md:mt-24"></Image>
+      <Image src={projectData.longImg} width={1920} height={1080} alt="test image" className="mt-12 w-full h-72 object-cover border md:mt-8 xl:mt-24"></Image>
       <div className="mt-14 text-center leading-6">{projectData.longDescription}</div>
     </div>
   );

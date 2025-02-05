@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 
 export const ProjectCards = () => {
   return (
-    <div className="pt-4 grid gap-36 grid-cols-1 md:pt-36 md:gap-96">
+    <div className="pt-4 grid gap-36 grid-cols-1 md:pt-16 xl:mt-32 md:gap-48 xl:gap-64">
       {projectDatas.map((projectData) => {
         return <ProjectCard projectData={projectData} key={projectData.id} />;
       })}
