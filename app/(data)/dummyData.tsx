@@ -1,4 +1,84 @@
-import { ProjectDetails, Article } from "./types";
+import { About, ProjectDetails, Article } from "./types";
+
+const about: About = {
+  aboutMe: {
+    description: "Try to introduce myself in this paragraph, but exactly what to say is a mystery. Typing is a kind of way to say something.",
+    img: "/images/TEST_JPG.jpg",
+  },
+  skills: [
+    {
+      id: "1",
+      title: "HTML",
+      level: "85%",
+    },
+    {
+      id: "2",
+      title: "CSS",
+      level: "90%",
+    },
+    {
+      id: "3",
+      title: "JavaScript",
+      level: "70%",
+    },
+    {
+      id: "4",
+      title: "Tailwind CSS",
+      level: "80%",
+    },
+    {
+      id: "5",
+      title: "NodeJS",
+      level: "60%",
+    },
+    {
+      id: "6",
+      title: "ReactJS",
+      level: "70%",
+    },
+    {
+      id: "7",
+      title: "Web Management",
+      level: "95%",
+    },
+    {
+      id: "8",
+      title: "Git",
+      level: "70%",
+    },
+    {
+      id: "9",
+      title: "TypeScript",
+      level: "60%",
+    },
+    {
+      id: "10",
+      title: "Motion",
+      level: "80%",
+    },
+    {
+      id: "11",
+      title: "AEM",
+      level: "60%",
+    },
+    {
+      id: "12",
+      title: "JIRA",
+      level: "60%",
+    },
+  ],
+  experiences: [
+    { title: "First", description: "Happy first job ever, the colleagues were nice and the projects were fun, yet I want to explore the world more.", id: 1 },
+    { title: "Second", description: "Temp Job for transition of my next career, great operating team.", id: 2 },
+    { title: "Third", description: "The weirdest place I ever been, people are scared all the time.", id: 3 },
+    { title: "Fourth", description: "Nice opportunity for developer newbies, yet the dev team seems to be disbanding at any moment.", id: 4 },
+    { title: "Fifth", description: "Keep going and beyond", id: 5 },
+  ],
+  educations: [
+  { title: "First", description: "University is where I met my best friends.", id: 1 },
+  { title: "Second", description: "Truly taught me how to write codes.", id: 2 }
+]
+};
 
 const projectDatas: ProjectDetails[] = [
   {
@@ -13,8 +93,8 @@ const projectDatas: ProjectDetails[] = [
     brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 1.",
     makingDescription: "making is where magic happened 1.",
     outComeDescription: "appreciate for any help 1.",
-    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
-    makingImg: "bg-red-200",
+    brainStormingImg: ["/images/TEST_JPG.jpg", "/images/TEST_JPG.jpg", "/images/TEST_JPG.jpg"],
+    makingImg: "/images/TEST_JPG.jpg",
     outComeImg: "bg-red-100",
     videoImg: "/images/TEST_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
@@ -32,8 +112,8 @@ const projectDatas: ProjectDetails[] = [
     brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 2.",
     makingDescription: "making is where magic happened 2.",
     outComeDescription: "appreciate for any help 2.",
-    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
-    makingImg: "bg-red-200",
+    brainStormingImg: ["/images/TEST2_JPG.jpg", "/images/TEST2_JPG.jpg", "/images/TEST2_JPG.jpg"],
+    makingImg: "/images/TEST2_JPG.jpg",
     outComeImg: "bg-red-100",
     videoImg: "/images/TEST2_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
@@ -51,8 +131,8 @@ const projectDatas: ProjectDetails[] = [
     brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 3.",
     makingDescription: "making is where magic happened 3.",
     outComeDescription: "appreciate for any help 3.",
-    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
-    makingImg: "bg-red-200",
+    brainStormingImg: ["/images/TEST3_JPG.jpg", "/images/TEST3_JPG.jpg", "/images/TEST3_JPG.jpg"],
+    makingImg: "/images/TEST3_JPG.jpg",
     outComeImg: "bg-red-100",
     videoImg: "/images/TEST3_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
@@ -70,8 +150,8 @@ const projectDatas: ProjectDetails[] = [
     brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 4.",
     makingDescription: "making is where magic happened 4.",
     outComeDescription: "appreciate for any help 4.",
-    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
-    makingImg: "bg-red-200",
+    brainStormingImg: ["/images/TEST4_JPG.jpg", "/images/TEST4_JPG.jpg", "/images/TEST4_JPG.jpg"],
+    makingImg: "/images/TEST4_JPG.jpg",
     outComeImg: "bg-red-100",
     videoImg: "/images/TEST4_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
@@ -89,8 +169,8 @@ const projectDatas: ProjectDetails[] = [
     brainStormingDescription: "explaining what I am doing to people who know and try to make it look easy 5.",
     makingDescription: "making is where magic happened 5.",
     outComeDescription: "appreciate for any help 5.",
-    brainStormingImg: ["bg-red-100", "bg-red-200", "bg-red-300"],
-    makingImg: "bg-red-200",
+    brainStormingImg: ["/images/TEST5_JPG.jpg", "/images/TEST5_JPG.jpg", "/images/TEST5_JPG.jpg"],
+    makingImg: "/images/TEST5_JPG.jpg",
     outComeImg: "bg-red-100",
     videoImg: "/images/TEST5_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
@@ -111,4 +191,4 @@ const articleDatas: Article[] = [
   { id: 8, title: "Article 8", description: "Description about this article to make it look good 8. Description about this article to make it look good 8.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: false },
 ];
 
-export { projectDatas, articleDatas };
+export { about, projectDatas, articleDatas };

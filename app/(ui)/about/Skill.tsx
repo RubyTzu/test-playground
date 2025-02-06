@@ -2,77 +2,14 @@
 import { useRef } from "react";
 import { useInView, motion } from "motion/react";
 import { SectionTitle } from "@/app/(ui)/shareComponent/SectionTitle";
-import { Title } from "@/app/(data)/types";
+import { SkillsType } from "@/app/(data)/types";
 
-const skillTitle: Title[] = [
-  {
-    id: "1",
-    title: "HTML",
-    level: "85%",
-  },
-  {
-    id: "2",
-    title: "CSS",
-    level: "90%",
-  },
-  {
-    id: "3",
-    title: "JavaScript",
-    level: "70%",
-  },
-  {
-    id: "4",
-    title: "Tailwind CSS",
-    level: "80%",
-  },
-  {
-    id: "5",
-    title: "NodeJS",
-    level: "60%",
-  },
-  {
-    id: "6",
-    title: "ReactJS",
-    level: "70%",
-  },
-  {
-    id: "7",
-    title: "Web Management",
-    level: "95%",
-  },
-  {
-    id: "8",
-    title: "Git",
-    level: "70%",
-  },
-  {
-    id: "9",
-    title: "TypeScript",
-    level: "60%",
-  },
-  {
-    id: "10",
-    title: "Motion",
-    level: "80%",
-  },
-  {
-    id: "11",
-    title: "AEM",
-    level: "60%",
-  },
-  {
-    id: "12",
-    title: "JIRA",
-    level: "60%",
-  },
-];
-
-export const Skills = () => {
+export const Skills = ({ skills }: { skills: SkillsType[] }) => {
   return (
     <div>
       <SectionTitle>Skills</SectionTitle>
       <div className="grid gap-4 grid-cols-2 md:grid-cols-6">
-        {skillTitle.map((skill: any) => {
+        {skills.map((skill: any) => {
           return <Skill key={skill.id} id={skill.id} title={skill.title} lineWidth={skill.level} />;
         })}
       </div>

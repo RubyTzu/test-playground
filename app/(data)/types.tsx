@@ -1,4 +1,14 @@
-export interface Title {
+export interface About {
+  aboutMe: AboutMeType;
+  skills: SkillsType[];
+  experiences: Item[];
+  educations: Item[];
+}
+export interface AboutMeType {
+  description: string;
+  img: string;
+}
+export interface SkillsType {
   id: string;
   title: string;
   level: string;
