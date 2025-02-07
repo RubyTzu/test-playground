@@ -1,3 +1,9 @@
+export interface Intro {
+  name: string;
+  intro: string;
+  img: string;
+  resumeUrl: string;
+}
 export interface About {
   aboutMe: AboutMeType;
   skills: SkillsType[];

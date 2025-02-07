@@ -32,9 +32,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="grid grid-rows-[8rem_1fr_6rem] min-h-screen font-[family-name:var(--font-geist-sans)]">
           <Navbar />
-          <MainContainer>
-              {children}
-           </MainContainer>
+          <MainContainer>{children}</MainContainer>
           <Footer />
           <BackToTopButton />
         </div>

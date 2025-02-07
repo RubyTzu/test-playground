@@ -1,4 +1,11 @@
-import { About, ProjectDetails, Article } from "./types";
+import { Intro, About, ProjectDetails, Article } from "./types";
+
+const intro: Intro = {
+  name: "Ruby Chen",
+  intro: "This is a place to let me practice web skill.",
+  img: "/images/TEST_JPG.jpg",
+  resumeUrl: "/",
+};
 
 const about: About = {
   aboutMe: {
@@ -95,7 +102,7 @@ const projectDatas: ProjectDetails[] = [
     outComeDescription: "appreciate for any help 1.",
     brainStormingImg: ["/images/TEST_JPG.jpg", "/images/TEST_JPG.jpg", "/images/TEST_JPG.jpg"],
     makingImg: "/images/TEST_JPG.jpg",
-    outComeImg: "bg-red-100",
+    outComeImg: "/images/TEST_JPG.jpg",
     videoImg: "/images/TEST_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
     demoUrl: "/",
@@ -114,7 +121,7 @@ const projectDatas: ProjectDetails[] = [
     outComeDescription: "appreciate for any help 2.",
     brainStormingImg: ["/images/TEST2_JPG.jpg", "/images/TEST2_JPG.jpg", "/images/TEST2_JPG.jpg"],
     makingImg: "/images/TEST2_JPG.jpg",
-    outComeImg: "bg-red-100",
+    outComeImg: "/images/TEST2_JPG.jpg",
     videoImg: "/images/TEST2_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
     demoUrl: "/",
@@ -133,7 +140,7 @@ const projectDatas: ProjectDetails[] = [
     outComeDescription: "appreciate for any help 3.",
     brainStormingImg: ["/images/TEST3_JPG.jpg", "/images/TEST3_JPG.jpg", "/images/TEST3_JPG.jpg"],
     makingImg: "/images/TEST3_JPG.jpg",
-    outComeImg: "bg-red-100",
+    outComeImg: "/images/TEST3_JPG.jpg",
     videoImg: "/images/TEST3_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
     demoUrl: "/",
@@ -152,7 +159,7 @@ const projectDatas: ProjectDetails[] = [
     outComeDescription: "appreciate for any help 4.",
     brainStormingImg: ["/images/TEST4_JPG.jpg", "/images/TEST4_JPG.jpg", "/images/TEST4_JPG.jpg"],
     makingImg: "/images/TEST4_JPG.jpg",
-    outComeImg: "bg-red-100",
+    outComeImg: "/images/TEST4_JPG.jpg",
     videoImg: "/images/TEST4_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
     demoUrl: "https://table-store-iota.vercel.app/",
@@ -171,7 +178,7 @@ const projectDatas: ProjectDetails[] = [
     outComeDescription: "appreciate for any help 5.",
     brainStormingImg: ["/images/TEST5_JPG.jpg", "/images/TEST5_JPG.jpg", "/images/TEST5_JPG.jpg"],
     makingImg: "/images/TEST5_JPG.jpg",
-    outComeImg: "bg-red-100",
+    outComeImg: "/images/TEST5_JPG.jpg",
     videoImg: "/images/TEST5_YOUTUBE.jpg",
     videoUrl: "https://www.youtube.com/watch?v=vEhD5WwCo44",
     demoUrl: "https://cost-sharing-app-git-staging-samchlius-projects.vercel.app/",
@@ -191,4 +198,4 @@ const articleDatas: Article[] = [
   { id: 8, title: "Article 8", description: "Description about this article to make it look good 8. Description about this article to make it look good 8.", img: "/images/TEST_JPG.jpg", date: "2024-12-09T12:00:00.000Z", isMain: false },
 ];
 
-export { about, projectDatas, articleDatas };
+export { intro, about, projectDatas, articleDatas };

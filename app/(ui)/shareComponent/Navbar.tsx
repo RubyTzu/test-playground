@@ -124,7 +124,7 @@ const NavMobile = () => {
       translateY: 0,
     },
     opened: {
-      rotate: 45,
+      rotate: 0,
       translateY: 1.5,
     },
   };
@@ -142,7 +142,7 @@ const NavMobile = () => {
       translateY: 0,
     },
     opened: {
-      rotate: -45,
+      rotate: 0,
       translateY: -1.5,
     },
   };
@@ -160,12 +160,12 @@ const NavMobile = () => {
   const unitHeight = 4;
   const unitWidth = (unitHeight * 24) / 24;
   return (
-    <div className="relative md:hidden">
+    <div className="relative block md:hidden">
       <Link href="/" className="absolute right-0">
         <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
         <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
       </Link>
-      <div className="absolute z-50 w-fit" onClick={() => setOpen(!isOpen)}>
+      <div className="fixed z-50 w-fit" onClick={() => setOpen(!isOpen)}>
         <motion.svg viewBox={`0 0 ${unitWidth} ${unitHeight}`} overflow="visible" preserveAspectRatio="none" width={24} height={24}>
           <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="0" y2="0" variants={top} {...lineprops} />
           <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="1.5" y2="1.5" variants={center} {...lineprops} />
