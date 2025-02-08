@@ -5,6 +5,41 @@ const intro: Intro = {
   intro: "This is a place to let me practice web skill.",
   img: "/images/TEST_JPG.jpg",
   resumeUrl: "/",
+  socialMedia: [
+    {
+      title: "BH",
+      href: "https://www.behance.net",
+      displayIcon: "BehanceIcon",
+    },
+    {
+      title: "GH",
+      href: "https://github.com/",
+      displayIcon: "GitHubIcon",
+    },
+    {
+      title: "LI",
+      href: "https://tw.linkedin.com",
+      displayIcon: "LinkedInIcon",
+    },
+  ],
+  pageRoute: [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/about",
+    },
+    {
+      title: "Project",
+      href: "/project",
+    },
+    {
+      title: "Article",
+      href: "/article",
+    },
+  ]
 };
 
 const about: About = {

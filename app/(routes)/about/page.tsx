@@ -6,7 +6,7 @@ import { about } from "@/app/(data)/dummyData";
 
 export default function page() {
   return (
-    <div className="w-full flex flex-col gap-36 md:gap-96">
+    <div className="w-full flex flex-col gap-36 md:gap-72">
       <AboutMe aboutMe={about.aboutMe} />
       <Skills skills={about.skills} />
       <Experience experiences={about.experiences} />

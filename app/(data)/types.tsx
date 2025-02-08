@@ -3,6 +3,17 @@ export interface Intro {
   intro: string;
   img: string;
   resumeUrl: string;
+  socialMedia: SocialMedia[];
+  pageRoute: Route[];
+}
+export interface SocialMedia {
+  title: string;
+  href: string;
+  displayIcon: string;
+}
+export interface Route {
+  title: string;
+  href: string;
 }
 export interface About {
   aboutMe: AboutMeType;

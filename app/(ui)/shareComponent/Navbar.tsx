@@ -1,70 +1,39 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { motion } from "motion/react";
 import { spring } from "motion";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { socialMediaIconMap } from "./Icons";
+import { intro } from "@/app/(data)/dummyData";
+import { Route, SocialMedia } from "@/app/(data)/types";
 
-interface Route {
+interface DisplayProps {
   title: string;
   href: string;
+  displayIcon: string;
+  wSize: string;
+  hSize: string;
 }
-
-interface SocialMedia {
-  title: string;
-  href: string;
-  icon: string;
-}
-
-const routes: Route[] = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Project",
-    href: "/project",
-  },
-  {
-    title: "Article",
-    href: "/article",
-  },
-];
-
-const socialMedia: SocialMedia[] = [
-  {
-    title: "GH",
-    href: "https://github.com/",
-    icon: "bg-red-100",
-  },
-  {
-    title: "LI",
-    href: "https://tw.linkedin.com",
-    icon: "bg-red-200",
-  },
-  {
-    title: "BH",
-    href: "https://www.behance.net",
-    icon: "bg-red-300",
-  },
-];
 
 export const Navbar = () => {
+  const socialMedia = intro.socialMedia;
+  const routes = intro.pageRoute;
+
   return (
-    <header className="max-w-screen px-6 pt-6 md:px-10">
-      <NavDesktop />
-      <NavMobile />
-    </header>
+    <>
+      <header className="max-w-screen px-6 pt-6 md:px-10">
+        <NavDesktop socialMedia={socialMedia} routes={routes} />
+        <NavMobile socialMedia={socialMedia} routes={routes} />
+      </header>
+      <div className="py-9 fixed w-full bg-gradient-to-t from-white/15 from-2% via-white/90 via-30% to-white to-90% z-30 border-0 md:hidden"></div>
+    </>
   );
 };
 
-const NavDesktop = () => {
-    const pathname = usePathname();
+const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes: Route[] }) => {
+  const pathname = usePathname();
 
   return (
     <div className="mx-auto max-w-[1200px] hidden justify-between items-center md:flex">
@@ -80,12 +49,11 @@ const NavDesktop = () => {
       </div>
       <div className="w-fit flex items-center gap-5 h-fit">
         {socialMedia.map((icon: SocialMedia) => (
-          <Link target="_blank" key={icon.title} href={icon.href}>
-            <div className={`rounded-full flex justify-center items-center w-8 h-8 ${icon.icon}`}>
-              <div className="font-semibold text-xs text-white">{icon.title}</div>
-            </div>
-          </Link>
+          <Fragment key={icon.title}>
+            <Display title={icon.title} href={icon.href} displayIcon={icon.displayIcon} wSize={"w-7"} hSize={"h-7"} />
+          </Fragment>
         ))}
+
         <Link href="/" className="">
           <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
           <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
@@ -95,10 +63,10 @@ const NavDesktop = () => {
   );
 };
 
-const NavMobile = () => {
+const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes: Route[] }) => {
   const pathname = usePathname();
   const [isOpen, setOpen] = useState(false);
-   
+
   const variant = isOpen ? "opened" : "closed";
   const mobileMenuVariant = {
     closed: {
@@ -161,7 +129,7 @@ const NavMobile = () => {
   const unitWidth = (unitHeight * 24) / 24;
   return (
     <div className="relative block md:hidden">
-      <Link href="/" className="absolute right-0">
+      <Link href="/" className="fixed right-6 z-40">
         <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
         <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
       </Link>
@@ -172,7 +140,7 @@ const NavMobile = () => {
           <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="3" y2="3" variants={bottom} {...lineprops} />
         </motion.svg>
       </div>
-      <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="z-40 fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-gray-50/95">
+      <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="z-40 fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-white/95">
         <div className="w-fit">
           {routes.map((site: Route) => (
             <div key={site.title}>
@@ -190,14 +158,22 @@ const NavMobile = () => {
         </div>
         <div className="w-fit flex gap-5 h-fit">
           {socialMedia.map((icon: SocialMedia) => (
-            <Link target="_blank" key={icon.title} href={icon.href}>
-              <div className={`rounded-full flex justify-center items-center w-16 h-16 ${icon.icon}`}>
-                <div className="font-semibold text-xs text-white">{icon.title}</div>
-              </div>
-            </Link>
+            <Fragment key={icon.title}>
+              <Display title={icon.title} href={icon.href} displayIcon={icon.displayIcon} wSize={"w-12"} hSize={"h-12"} />
+            </Fragment>
           ))}
         </div>
       </motion.div>
     </div>
   );
 };
+
+function Display({ title, href, displayIcon, wSize, hSize }: DisplayProps) {
+  const Icon = socialMediaIconMap[displayIcon as keyof typeof socialMediaIconMap];
+
+  return (
+    <Link target="_blank" key={title} href={href}>
+      <div className={`rounded-full flex justify-center items-center ${wSize} ${hSize}`}>{Icon ? <Icon /> : null}</div>
+    </Link>
+  );
+}
