@@ -6,7 +6,6 @@ import { spring } from "motion";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { socialMediaIconMap } from "@/app/(ui)/shareComponent/Icons";
-import { intro } from "@/app/(data)/dummyData";
 import { Route, SocialMedia } from "@/app/(data)/types";
 
 interface DisplayProps {
@@ -17,9 +16,7 @@ interface DisplayProps {
   hSize: string;
 }
 
-export const Navbar = () => {
-  const socialMedia = intro.socialMedia;
-  const routes = intro.pageRoute;
+export const Navbar = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes: Route[] }) => {
 
   return (
     <>
