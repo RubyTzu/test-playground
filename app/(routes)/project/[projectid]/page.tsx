@@ -3,12 +3,13 @@ import { useParams } from "next/navigation";
 import { ProjectIntro } from "@/app/(ui)/project/singleProject/ProjectIntro";
 import { ProjectThreePictures } from "@/app/(ui)/project/singleProject/ProjecThreePicture";
 import { ProjectOnePicture } from "@/app/(ui)/project/singleProject/ProjectOnePicture";
-import { projectDatas } from "@/app/(data)/dummyData";
 import { ProjectDetails } from "@/app/(data)/types";
 import { ProjectOneVideo } from "@/app/(ui)/project/singleProject/ProjectOneVideo";
+import { useProjectContext } from "@/app/(data)/Provider";
 
 export default function Page() {
   const { projectid } = useParams<{ projectid: string }>();
+  const projectDatas = useProjectContext() || [];
   const projectData: ProjectDetails = projectDatas.filter((project) => project.id === Number(projectid))[0];
 
   return (

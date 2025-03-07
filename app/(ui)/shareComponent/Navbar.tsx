@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { socialMediaIconMap } from "@/app/(ui)/shareComponent/Icons";
 import { Route, SocialMedia } from "@/app/(data)/types";
+import { useIntroContext } from "@/app/(data)/Provider";
 
 interface DisplayProps {
   title: string;
@@ -16,7 +17,8 @@ interface DisplayProps {
   hSize: string;
 }
 
-export const Navbar = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes: Route[] }) => {
+export const Navbar = () => {
+const { socialMedia = null, pageRoute: routes = null } = useIntroContext() || {};
 
   return (
     <>
@@ -29,13 +31,13 @@ export const Navbar = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; ro
   );
 };
 
-const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes: Route[] }) => {
+const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null; routes: Route[] | null }) => {
   const pathname = usePathname();
 
   return (
     <div className="mx-auto max-w-[1200px] hidden justify-between items-center md:flex">
       <div className="w-fit flex gap-5 h-fit">
-        {routes.map((site: Route) => (
+        {routes?.map((site: Route) => (
           <Link className="relative" key={site.title} href={site.href}>
             <motion.div className="relative bottom-[-5px] w-full  border-black">
               {site.title}
@@ -45,7 +47,7 @@ const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; route
         ))}
       </div>
       <div className="w-fit flex items-center gap-5 h-fit">
-        {socialMedia.map((icon: SocialMedia) => (
+        {socialMedia?.map((icon: SocialMedia) => (
           <Fragment key={icon.title}>
             <Display title={icon.title} href={icon.href} displayIcon={icon.displayIcon} wSize={"w-7"} hSize={"h-7"} />
           </Fragment>
@@ -60,7 +62,7 @@ const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; route
   );
 };
 
-const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes: Route[] }) => {
+const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null; routes: Route[] | null }) => {
   const pathname = usePathname();
   const [isOpen, setOpen] = useState(false);
 
@@ -139,7 +141,7 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes
       </div>
       <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="z-40 fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-white/95">
         <div className="w-fit">
-          {routes.map((site: Route) => (
+          {routes?.map((site: Route) => (
             <div key={site.title}>
               <Link
                 href={site.href}
@@ -154,7 +156,7 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[]; routes
           ))}
         </div>
         <div className="w-fit flex gap-5 h-fit">
-          {socialMedia.map((icon: SocialMedia) => (
+          {socialMedia?.map((icon: SocialMedia) => (
             <Fragment key={icon.title}>
               <Display title={icon.title} href={icon.href} displayIcon={icon.displayIcon} wSize={"w-12"} hSize={"h-12"} />
             </Fragment>

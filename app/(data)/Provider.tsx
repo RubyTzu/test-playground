@@ -1,39 +1,51 @@
-// "use client";
-// import { createContext, useContext, useEffect, useState } from "react";
-// import { getIntroData } from "@/app/(data)/API";
-// import { Intro } from "@/app/(data)/types";
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+import { Intro, About, ProjectDetails, Article } from "@/app/(data)/types";
 
-// interface AllContextType {
-//   introData: Intro;
-// }
+interface AllContextType {
+  introData: Intro;
+  aboutData: About;
+  projectData: ProjectDetails[];
+  articleData: Article[];
+}
 
-// const AllContext = createContext<AllContextType | undefined>(undefined);
+const AllContext = createContext<AllContextType | undefined>(undefined);
 
-// export const Providers = ({ children }: { children: React.ReactNode }) => {
-//   const [introData, setIntroData] = useState({} as Intro);
+export const Providers = ({ children }: { children: React.ReactNode }) => {
+  const [data, setData] = useState<AllContextType>({
+    introData: {} as Intro,
+    aboutData: {} as About,
+    projectData: [] as ProjectDetails[],
+    articleData: [] as Article[],
+  });
 
-//   useEffect(() => {
-//     fetchIntro();
-//   }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/data.json");
+      const json = await response.json();
+      setData({
+        introData: json.intro,
+        aboutData: json.about,
+        projectData: json.project,
+        articleData: json.article,
+      });
+    };
 
-//   const fetchIntro = async () => {
-//     try {
-//       const intro = await getIntroData();
+    fetchData();
+  }, []);
 
-//       setIntroData(intro);
-//     } catch (error) {
-//       console.error("Error fetching data:", error);
-//     }
-//   };
+  return <AllContext.Provider value={data}>{children}</AllContext.Provider>;
+};
 
-//   return <AllContext.Provider value={{ introData }}>{children}</AllContext.Provider>;
-// };
+const useContextData = <T extends keyof AllContextType>(key: T) => {
+  const context = useContext(AllContext);
+  if (!context) {
+    throw new Error("useContextData must be used within a Provider");
+  }
+  return context[key];
+};
 
-// export const useAllContext = () => {
-//   const context = useContext(AllContext);
-//   if (!context) {
-//     throw new Error("useUser must be used within a Provider");
-//   }
-
-//   return context;
-// };
+export const useIntroContext = () => useContextData("introData");
+export const useAboutContext = () => useContextData("aboutData");
+export const useProjectContext = () => useContextData("projectData");
+export const useArticlesContext = () => useContextData("articleData");

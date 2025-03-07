@@ -1,8 +1,11 @@
 "use client";
+import { useIntroContext } from "@/app/(data)/Provider";
 import { motion } from "motion/react";
 import Link from "next/link";
 
-export const IntroText = ({ name, intro, resumeUrl }: { name: string; intro: string; resumeUrl: string }) => {
+export const IntroText = () => {
+const { name = "", intro = "", resumeUrl = "" } = useIntroContext() || {};
+
   return (
     <>
       <div className="flex flex-col gap-2">

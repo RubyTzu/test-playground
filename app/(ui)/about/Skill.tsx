@@ -2,9 +2,11 @@
 import { useRef } from "react";
 import { useInView, motion } from "motion/react";
 import { SectionTitle } from "@/app/(ui)/shareComponent/SectionTitle";
-import { SkillsType } from "@/app/(data)/types";
+import { useAboutContext } from "@/app/(data)/Provider";
 
-export const Skills = ({ skills }: { skills: SkillsType[] }) => {
+export const Skills = () => {
+const skills = useAboutContext().skills || [];
+
   return (
     <div>
       <SectionTitle>Skills</SectionTitle>

@@ -1,9 +1,11 @@
-"use client"
+"use client";
 import { SectionTitle } from "@/app/(ui)/shareComponent/SectionTitle";
 import { HorizenScrollItems } from "../shareComponent/HorizenScrollItems";
-import { Item } from "@/app/(data)/types";
+import { useAboutContext } from "@/app/(data)/Provider";
 
-export const Experience = ({ experiences }: { experiences: Item[] }) => {
+export const Experience = () => {
+  const experiences = useAboutContext().experiences || [];
+
   const reverseItems = [...experiences].reverse();
 
   return (

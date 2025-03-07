@@ -1,8 +1,10 @@
 "use client"
+import { useAboutContext } from "@/app/(data)/Provider";
 import { motion } from "motion/react";
-import { AboutMeType } from "@/app/(data)/types";
 
-export const AboutMe = ({ aboutMe }: { aboutMe: AboutMeType }) => {
+export const AboutMe = () => {
+const aboutMe = useAboutContext().aboutMe || {};
+
   return (
     <>
       <div className="pt-8 grid gap-20 grid-cols-1 md:pt-16 xl:mt-24 md:grid-cols-2">

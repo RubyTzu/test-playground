@@ -1,11 +1,12 @@
 "use client";
-
-import { articleDatas } from "@/app/(data)/dummyData";
+import { useArticlesContext } from "@/app/(data)/Provider";
 import { Article } from "@/app/(data)/types";
 import { MainArticle } from "@/app/(ui)/article/MainArticle";
 import { SubArticle } from "@/app/(ui)/article/SubArticle";
 
 export default function Page() {
+const articleDatas = useArticlesContext() || [];
+
 
 const mainArticleDatas = articleDatas.filter((article)=> article.isMain === true);
 const subArticleDatas = articleDatas.filter((article)=> article.isMain !== true);

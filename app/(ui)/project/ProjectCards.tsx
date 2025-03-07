@@ -2,10 +2,13 @@
 import { useRouter } from "next/navigation";
 import { motion, useInView } from "motion/react";
 import { Project } from "@/app/(data)/types";
-import { projectDatas } from "@/app/(data)/dummyData";
 import { useRef, useState } from "react";
+import { useProjectContext } from "@/app/(data)/Provider";
 
 export const ProjectCards = () => {
+  const projects = useProjectContext() || [];
+  const projectDatas = [...projects].reverse();
+
   return (
     <div className="pt-4 grid gap-36 grid-cols-1 md:pt-16 xl:mt-32 md:gap-48 xl:gap-64">
       {projectDatas.map((projectData) => {

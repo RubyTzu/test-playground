@@ -1,7 +1,10 @@
 "use client"
+import { useIntroContext } from "@/app/(data)/Provider";
 import { motion } from "motion/react";
 
-export const IntroImg = ({img}:{img: string}) => {
+export const IntroImg = () => {
+  const img = useIntroContext().img || undefined;
+
     return (
       <>
         <motion.div
