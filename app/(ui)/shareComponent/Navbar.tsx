@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { spring } from "motion";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import { BehanceIcon, GitHubIcon, LinkedInIcon } from "@/app/(ui)/shareComponent/Icons";
+import { socialMediaIconMap } from "@/app/(ui)/shareComponent/Icons";
 import { Route, SocialMedia } from "@/app/(data)/types";
 import { useIntroContext } from "@/app/(data)/Provider";
 
@@ -168,14 +168,8 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
 };
 
 function Display({ title, href, displayIcon, wSize, hSize }: DisplayProps) {
-  const socialMediaIconMap = {
-    BehanceIcon: BehanceIcon,
-    GitHubIcon: GitHubIcon,
-    LinkedInIcon: LinkedInIcon,
-  };
-  
   const Icon = socialMediaIconMap[displayIcon as keyof typeof socialMediaIconMap];
-console.log(displayIcon);
+
   return (
     <Link target="_blank" key={title} href={href}>
       <div className={`rounded-full flex justify-center items-center ${wSize} ${hSize}`}>{Icon ? <Icon /> : null}</div>
