@@ -1,4 +1,4 @@
-const BehanceIcon = () => (
+const Behance = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 64 64">
     <path
       fill="rgb(254 226 226 / 1)"
@@ -8,7 +8,7 @@ const BehanceIcon = () => (
   </svg>
 );
 
-const GitHubIcon = () => (
+const GitHub = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 64 64">
     <path
       fill="rgb(254 202 202 / 1)"
@@ -17,7 +17,7 @@ const GitHubIcon = () => (
   </svg>
 );
 
-const LinkedInIcon = () => (
+const LinkedIn = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 64 64">
     <path
       fill="rgb(252 165 165 / 1)"
@@ -27,9 +27,9 @@ const LinkedInIcon = () => (
 );
 
 const socialMediaIconMap = {
-  BehanceIcon: BehanceIcon,
-  GitHubIcon: GitHubIcon,
-  LinkedInIcon: LinkedInIcon,
+  BehanceIcon: Behance,
+  GitHubIcon: GitHub,
+  LinkedInIcon: LinkedIn,
 };
 
 export { socialMediaIconMap };
