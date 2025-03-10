@@ -32,10 +32,4 @@ function LinkedInIcon() {
   );
 }
 
-const socialMediaIconMap = {
-  BehanceIcon: BehanceIcon,
-  GitHubIcon: GitHubIcon,
-  LinkedInIcon: LinkedInIcon,
-};
-
-export { socialMediaIconMap, BehanceIcon, GitHubIcon, LinkedInIcon };
+export { BehanceIcon, GitHubIcon, LinkedInIcon };
