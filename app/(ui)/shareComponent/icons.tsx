@@ -32,4 +32,4 @@ const socialMediaIconMap = {
   LinkedInIcon: LinkedInIcon,
 };
 
-export { socialMediaIconMap };
+export { socialMediaIconMap, BehanceIcon, GitHubIcon, LinkedInIcon };
