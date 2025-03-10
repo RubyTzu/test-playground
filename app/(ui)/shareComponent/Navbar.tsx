@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { spring } from "motion";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import { socialMediaIconMap } from "@/app/(ui)/shareComponent/Icons";
+import { socialMediaIconMap } from "@/app/(ui)/shareComponent/SocialMediaIcons";
 import { Route, SocialMedia } from "@/app/(data)/types";
 import { useIntroContext } from "@/app/(data)/Provider";
 
