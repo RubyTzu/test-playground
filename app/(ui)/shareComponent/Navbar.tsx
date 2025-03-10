@@ -169,6 +169,7 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
 
 function Display({ title, href, displayIcon, wSize, hSize }: DisplayProps) {
   // const Icon = socialMediaIconMap[displayIcon as keyof typeof socialMediaIconMap];
+  console.log(displayIcon)
 
   return (
     <Link target="_blank" key={title} href={href}>
