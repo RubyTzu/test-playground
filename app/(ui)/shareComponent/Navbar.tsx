@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { spring } from "motion";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-// import { socialMediaIconMap } from "@/app/(ui)/shareComponent/Icons";
+import { socialMediaIconMap } from "@/app/(ui)/shareComponent/Icons";
 import { Route, SocialMedia } from "@/app/(data)/types";
 import { useIntroContext } from "@/app/(data)/Provider";
 
@@ -168,14 +168,12 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
 };
 
 function Display({ title, href, displayIcon, wSize, hSize }: DisplayProps) {
-  // const Icon = socialMediaIconMap[displayIcon as keyof typeof socialMediaIconMap];
-  console.log(displayIcon)
+  const Icon = socialMediaIconMap[displayIcon as keyof typeof socialMediaIconMap];
 
   return (
     <Link target="_blank" key={title} href={href}>
       <div className={`rounded-full flex justify-center items-center ${wSize} ${hSize}`}>
-        {/* {Icon ? <Icon /> : null} */}
-        <div className="w-8 h-7 bg-red-200 rounded-full"/>
+        {Icon ? <Icon /> : null}
         </div>
     </Link>
   );
