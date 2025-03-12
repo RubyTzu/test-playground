@@ -4,7 +4,7 @@ import Image from "next/image";
 export const ProjectThreePictures = ({ projectData, title }: { projectData: ProjectDetails; title: string }) => {
   return (
     <div>
-      <div className="text-lg font-semibold">{title}</div>
+      <div className="text-lg font-semibold pb-4">{title}</div>
       <div>{projectData.brainStormingDescription}</div>
       {title === "- Brainstorming" ? (
         <div className="mt-12 grid gap-6 md:grid-cols-3">

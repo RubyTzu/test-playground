@@ -4,7 +4,7 @@ import Image from "next/image";
 export const ProjectOnePicture = ({ projectData, title }: { projectData: ProjectDetails; title: string }) => {
   return (
     <div>
-      <div className="text-lg font-semibold">{title}</div>
+      <div className="text-lg font-semibold pb-4">{title}</div>
       {title === "- Making" ? (
         <>
           <div>{projectData.makingDescription}</div>
