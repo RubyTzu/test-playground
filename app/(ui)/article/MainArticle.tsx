@@ -13,7 +13,7 @@ export const MainArticle = ({ articleData }: { articleData: Article }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-4 w-full border-transparent border-2 border-b-slate-100 py-10 first:pt-0 md:grid-cols-6 md:gap-20">
+    <div className="grid grid-cols-1 gap-4 w-full border-transparent border-2 border-b-stone-100 py-10 first:pt-0 md:grid-cols-6 md:gap-20">
       <Image src={articleData.img} width={1920} height={1080} onClick={handleClick} className="h-36 w-full bg-red-200 border object-cover cursor-pointer md:col-span-2" alt={`Article Image ${articleData.title}`}></Image>
       <div className="flex flex-col justify-center gap-3 md:col-span-3">
         <div className="text-2xl font-medium leading-loose">{articleData.title}</div>

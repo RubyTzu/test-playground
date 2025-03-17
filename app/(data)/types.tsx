@@ -5,6 +5,7 @@ export interface Intro {
   resumeUrl: string;
   socialMedia: SocialMedia[];
   pageRoute: Route[];
+  email: string;
 }
 export interface SocialMedia {
   title: string;
@@ -34,6 +35,8 @@ export interface Item {
   title: string;
   description: string;
   id: number;
+  subtitleOne: string;
+  subtitleTwo: string;
 }
 
 export interface Project {

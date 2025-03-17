@@ -7,13 +7,15 @@ function useParallax(value: MotionValue<number>, distance: string) {
   return useTransform(value, [0, 1], ["0", `-${distance}%`]);
 }
 
-function Card({ title, description, id, xPosition }: { title: string; description: string; id: number; xPosition: MotionValue<string> }) {
+function Card({ title, description, id, subtitleOne, subtitleTwo, xPosition }: { title: string; description: string; id: number; subtitleOne: string; subtitleTwo: string; xPosition: MotionValue<string> }) {
   return (
     <motion.li style={{ x: xPosition }} className="flex w-full items-center justify-center flex-col">
       <div className="w-[1200px] h-[300px] flex flex-col items-center justify-center md:h-[400px]">
-        <div className="text-2xl mb-5">{title}</div>
-        <div className="text-base mx-64 w-48 text-center md:w-fit">{description}</div>
+        <div className="text-2xl">{title}</div>
+        <div className="text-base mb-5 text-gray-800">{subtitleOne}</div>
+        <div className="text-base mx-64 w-48 text-center md:w-fit ">{description}</div>
       </div>
+      <div className="text-base text-gray-500 pb-5">{subtitleTwo}</div>
       <h3 className="text-2xl text-slate-500">{`#${id}`}</h3>
     </motion.li>
   );
@@ -64,9 +66,9 @@ export const HorizenScrollItems = ({ items }: { items: Item[] }) => {
             <div style={{ zIndex: "2" }} className="fixed bottom-[150px] left-16 right-16 md:left-96 md:right-96 bg-red-200 h-[5px] md:bottom-[80px]"></div>
           </>
         )}
-        <ul className="z-10 flex sticky top-36 overflow-hidden bg-white">
+        <ul className="z-10 flex sticky top-36 overflow-hidden ">
           {items.map((item) => (
-            <Card title={item.title} description={item.description} id={item.id} xPosition={xPosition} key={item.id} />
+            <Card title={item.title} description={item.description} id={item.id} subtitleOne={item.subtitleOne} subtitleTwo={item.subtitleTwo} xPosition={xPosition} key={item.id} />
           ))}
         </ul>
       </motion.section>

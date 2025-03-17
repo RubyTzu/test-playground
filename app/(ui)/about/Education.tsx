@@ -9,7 +9,7 @@ export const Education = () => {
 
   return (
     <div className="relative">
-      <div className="z-20 sticky top-0 bg-white">
+      <div className="z-20 sticky top-0 ">
         <SectionTitle>Education</SectionTitle>
       </div>
       <HorizenScrollItems items={reverseItems} />

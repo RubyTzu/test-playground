@@ -38,7 +38,8 @@
                 "title": "Article",
                 "href": "/article"
             }
-        ]
+        ],
+        "email": "rrubyitzuchen@gmail.com"
     },
     "about": {
         "aboutMe": {
@@ -111,39 +112,46 @@
             {
                 "title": "First",
                 "description": "Happy first job ever, the colleagues were nice and the projects were fun, yet I want to explore the world more.",
-                "id": 1
+                "id": 1,
+                "subtitleOne": "First Job place",
+                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
             },
             {
                 "title": "Second",
                 "description": "Temp Job for transition of my next career, great operating team.",
-                "id": 2
+                "id": 2,
+                "subtitleOne": "Second Job place",
+                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
             },
             {
                 "title": "Third",
-                "description": "The weirdest place I ever been, people are scared all the time.",
-                "id": 3
+                "description": "Nice opportunity for developer newbies, yet the dev team seems to be disbanding at any moment.",
+                "id": 3,
+                "subtitleOne": "Third Job place",
+                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
             },
             {
                 "title": "Fourth",
-                "description": "Nice opportunity for developer newbies, yet the dev team seems to be disbanding at any moment.",
-                "id": 4
-            },
-            {
-                "title": "Fifth",
                 "description": "Keep going and beyond",
-                "id": 5
+                "id": 4,
+                "subtitleOne": "Fourth Job place",
+                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
             }
         ],
         "educations": [
             {
                 "title": "First",
                 "description": "University is where I met my best friends.",
-                "id": 1
+                "id": 1,
+                "subtitleOne": "Communication Design",
+                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
             },
             {
                 "title": "Second",
                 "description": "Truly taught me how to write codes.",
-                "id": 2
+                "id": 2,
+                "subtitleOne": "Frontend Development",
+                "subtitleTwo": "20xx - 20xx | online course"
             }
         ]
     },

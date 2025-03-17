@@ -7,7 +7,7 @@ export const SubArticle = ({ articleData }: { articleData: Article }) => {
   const formattedDate = date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 
   return (
-    <Link href="/" className="grid grid-cols-1 gap-4 w-full border-transparent border-2 border-b-slate-100 py-10 md:grid-cols-6 md:gap-10">
+    <Link href="/" className="grid grid-cols-1 gap-4 w-full border-transparent border-2 border-b-stone-100 py-10 md:grid-cols-6 md:gap-10">
       <div className="col-span-2 text-xl font-medium flex items-center">{articleData.title}</div>
       <div className="col-span-3 flex items-center">{articleData.description}</div>
       <div className="col-span-1 text-sm font-light flex items-center">{formattedDate}</div>
