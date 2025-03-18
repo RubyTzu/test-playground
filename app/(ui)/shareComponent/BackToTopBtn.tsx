@@ -42,7 +42,7 @@ export const BackToTopButton = () => {
   return (
     showButton && (
       <div className="z-50 fixed w-full flex justify-end">
-        <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={scrollToTop} className="z-50 fixed bottom-20 right-8 w-10 h-10 flex justify-center items-center p-3 rounded-full bg-white shadow-md hover:bg-slate-50 transition-all md:right-20">
+        <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={scrollToTop} className="z-50 fixed bottom-10 right-8 w-10 h-10 flex justify-center items-center p-3 rounded-full bg-primary-100 shadow-md hover:bg-stone-100 transition-all md:bottom-24 md:right-20">
           ↑
         </motion.button>
       </div>

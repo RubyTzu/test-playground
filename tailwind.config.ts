@@ -11,9 +11,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          100: "#fbfbf8",
-          200: "#f3f4e5",
-          300: "#ebff79",
+          50: "#fdfcfa",
+          100: "#fdfbf8",
         },
         neutrals: {
           0: "#FFFFFF",
@@ -28,6 +27,10 @@ const config: Config = {
           800: "#262525",
           900: "#161616",
         },
+      },
+      boxShadow: {
+        whiteBlur: "0px 0px 20px 20px rgb(253, 252, 250)",
+        yellowWhiteBlur: "0px 0px 20px 50px rgb(253, 251, 248)",
       },
     },
   },

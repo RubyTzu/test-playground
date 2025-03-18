@@ -31,7 +31,8 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-t from-white via-[#fdfbf8] to-[#fdfcfa]`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#fdfbf8]`}>
+        {/* <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-t from-primary-50 via-primary-100 to-primary-50`}> */}
         <Providers>
           <div className="grid grid-rows-[8rem_1fr_6rem] min-h-screen font-[family-name:var(--font-geist-sans)]">
             <Navbar />

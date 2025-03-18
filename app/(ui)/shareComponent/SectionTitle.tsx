@@ -7,9 +7,9 @@ export const SectionTitle = ({ children }: { children: React.ReactNode }) => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="pt-20" ref={ref}>
+    <section className="pt-20 pb-10" ref={ref}>
       <motion.div
-        className="w-full text-center pb-10 text-[36px] font-semibold md:pb-20"
+        className="w-full text-center text-[36px] font-semibold"
         initial={{ opacity: 0, x: -20 }}
         animate={{
           opacity: isInView ? 1 : 0,
