@@ -44,7 +44,7 @@ const ProjectCard = ({ projectData }: { projectData: Project }) => {
       <motion.div initial={{ translateX: 10, opacity: 0, scale: 0.99 }} animate={{ translateX: isInView ? 0 : 10, opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.99 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="col-span-3 flex flex-col  md:justify-end items-end text-right">
         <div className="text-lg font-semibold text-left md:text-right w-full">{projectData.title}</div>
         <div className="mb-10 text-left md:text-right w-full">{projectData.description}</div>
-        <div onClick={handleClick} className="border-b-red-400 border-b-2 cursor-pointer">
+        <div onClick={handleClick} className="border-b-[#c44d4d] border-b-2 cursor-pointer">
           Learn More
         </div>
       </motion.div>

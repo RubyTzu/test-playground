@@ -39,7 +39,7 @@ const FooterDesktop = ({ email, year, scrollToTop }: { email: string | undefined
 
 const FooterMobile = ({ year, scrollToTop }: { year: number; scrollToTop: () => void }) => {
   return (
-    <div className="flex flex-col items-center justify-between mx-auto max-w-[1200px] text-zinc-400 md:hidden">
+    <div className="flex flex-col items-center justify-between mt-10 mb-5 mx-auto max-w-[1200px] md:hidden">
       <div className="text-center">
         Build by
         <br />

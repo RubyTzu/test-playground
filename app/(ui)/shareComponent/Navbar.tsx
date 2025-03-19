@@ -26,7 +26,7 @@ const { socialMedia = null, pageRoute: routes = null } = useIntroContext() || {}
         <NavDesktop socialMedia={socialMedia} routes={routes} />
         <NavMobile socialMedia={socialMedia} routes={routes} />
       </header>
-      <div className="py-9 fixed w-full bg-gradient-to-t from-white/15 from-2% via-primary-100/90 via-30% to-primary-100 to-90% z-30 border-0 md:hidden"></div>
+      <div className="py-9 fixed w-full bg-gradient-to-t from-white/15 from-2% via-white/90 via-30% to-white to-90% z-30 border-0 md:hidden"></div>
     </>
   );
 };
@@ -41,7 +41,7 @@ const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null
           <Link className="relative" key={site.title} href={site.href}>
             <motion.div className="relative bottom-[-5px] w-full  border-black">
               {site.title}
-              {site.href === pathname ? <motion.div className="absolute bottom-[-1px] left-0 right-0 h-[1px] bg-red-500 w-full" layoutId="underline" /> : null}
+              {site.href === pathname ? <motion.div className="absolute bottom-[-1px] left-0 right-0 h-[1px] bg-[#c44d4d] w-full" layoutId="underline" /> : null}
             </motion.div>
           </Link>
         ))}
@@ -54,8 +54,8 @@ const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null
         ))}
 
         <Link href="/" className="">
-          <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
-          <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
+          <div className="bg-[#9c0606] rounded-r-full w-3 h-3"></div>
+          <div className="bg-[#9c0606] rounded-tr-full w-5 h-4"></div>
         </Link>
       </div>
     </div>
@@ -115,7 +115,7 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
   };
 
   const lineprops: any = {
-    stroke: "#b91c1c",
+    stroke: "#9c0606",
     strokeWidth: 2,
     vectorEffect: "non-scaling-stroke",
     initial: "closed",
@@ -129,8 +129,8 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
   return (
     <div className="relative block md:hidden">
       <Link href="/" className="fixed right-6 z-40">
-        <div className="bg-red-700 rounded-r-full w-3 h-3"></div>
-        <div className="bg-red-700 rounded-tr-full w-5 h-4"></div>
+        <div className="bg-[#9c0606] rounded-r-full w-3 h-3"></div>
+        <div className="bg-[#9c0606] rounded-tr-full w-5 h-4"></div>
       </Link>
       <div className="fixed w-fit" onClick={() => setOpen(!isOpen)} style={{ zIndex: "52" }}>
         <motion.svg viewBox={`0 0 ${unitWidth} ${unitHeight}`} overflow="visible" preserveAspectRatio="none" width={24} height={24}>
@@ -140,13 +140,13 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
         </motion.svg>
       </div>
       <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-white/95" style={{ zIndex: "51" }}>
-        <div className="w-fit">
+        <div className="flex flex-col gap-6 justify-center items-center">
           {routes?.map((site: Route) => (
             <div key={site.title}>
               <Link
                 href={site.href}
-                className={clsx(" block py-4 px-3 text-gray-900", {
-                  "font-bold": site.href === pathname,
+                className={clsx("block w-fit", {
+                  "font-medium border-b border-b-[#9c0606]": site.href === pathname,
                   "font-medium": site.href !== pathname,
                 })}
                 onClick={() => setOpen(false)}>
