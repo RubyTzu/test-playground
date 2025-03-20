@@ -40,10 +40,10 @@ const Skill = ({ id, title, lineWidth }: { id: string; title: string; lineWidth:
         ease: [0.74, 0, 0.19, 1.02],
       }}>
       <div className="text-sm">{title}</div>
-      <div className="w-full border border-[#ffe3e0] h-3 rounded-full">
+      <div className="w-full border border-primary-200 h-3 rounded-full">
         <motion.div
           ref={lineRef}
-          className={` bg-[#c44d4d] h-[0.7rem] rounded-full`}
+          className={` bg-primary-300 h-[0.7rem] rounded-full`}
           initial={{ width: 0 }}
           animate={{ width: isLineInView ? lineWidth : 0 }}
           transition={{

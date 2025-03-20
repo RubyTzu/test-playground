@@ -62,8 +62,8 @@ export const HorizenScrollItems = ({ items }: { items: Item[] }) => {
       <motion.section ref={sectionRef} className="max-w-[80svw] relative h-[400vh]">
         {isInView && (
           <>
-            <motion.div className="fixed bottom-[150px] left-16 right-16 md:left-96 md:right-96  bg-[#fff6f5] origin-[0%] h-[5px] md:bottom-[80px]" style={{ scaleX, zIndex: "12" }} />
-            <div style={{ zIndex: "11" }} className="fixed bottom-[150px] left-16 right-16 md:left-96 md:right-96 bg-[#c44d4d] h-[5px] md:bottom-[80px]"></div>
+            <motion.div className="fixed bottom-[150px] left-16 right-16 md:left-96 md:right-96  bg-primary-100 origin-[0%] h-[5px] md:bottom-[80px]" style={{ scaleX, zIndex: "12" }} />
+            <div style={{ zIndex: "11" }} className="fixed bottom-[150px] left-16 right-16 md:left-96 md:right-96 bg-primary-300 h-[5px] md:bottom-[80px]"></div>
           </>
         )}
         <ul className="z-10 flex sticky top-36 overflow-hidden ">

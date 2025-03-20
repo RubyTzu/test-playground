@@ -18,13 +18,13 @@ interface DisplayProps {
 }
 
 export const Navbar = () => {
-const { socialMedia = null, pageRoute: routes = null } = useIntroContext() || {};
+const { socialMedia = null, pageRoute: routes = null, email: email = null } = useIntroContext() || {};
 
   return (
     <>
       <header className="max-w-screen px-6 pt-6 md:px-10">
         <NavDesktop socialMedia={socialMedia} routes={routes} />
-        <NavMobile socialMedia={socialMedia} routes={routes} />
+        <NavMobile socialMedia={socialMedia} routes={routes} email={email} />
       </header>
       <div className="py-9 fixed w-full bg-gradient-to-t from-white/15 from-2% via-white/90 via-30% to-white to-90% z-30 border-0 md:hidden"></div>
     </>
@@ -62,7 +62,7 @@ const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null
   );
 };
 
-const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null; routes: Route[] | null }) => {
+const NavMobile = ({ socialMedia, routes, email }: { socialMedia: SocialMedia[] | null; routes: Route[] | null; email: string | null; }) => {
   const pathname = usePathname();
   const [isOpen, setOpen] = useState(false);
 
@@ -139,14 +139,14 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
           <motion.line strokeLinecap="round" x1="0" x2={unitWidth} y1="3" y2="3" variants={bottom} {...lineprops} />
         </motion.svg>
       </div>
-      <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-32 pt-20 items-center bg-white/95" style={{ zIndex: "51" }}>
+      <motion.div initial={"closed"} variants={mobileMenuVariant} animate={variant} className="fixed left-0 top-0 w-[100vw] h-[100vh] flex flex-col justify-center gap-16 items-center bg-white/95" style={{ zIndex: "51" }}>
         <div className="flex flex-col gap-6 justify-center items-center">
           {routes?.map((site: Route) => (
             <div key={site.title}>
               <Link
                 href={site.href}
                 className={clsx("block w-fit", {
-                  "font-medium border-b border-b-[#9c0606]": site.href === pathname,
+                  "font-medium border-b border-b-primary-500": site.href === pathname,
                   "font-medium": site.href !== pathname,
                 })}
                 onClick={() => setOpen(false)}>
@@ -155,12 +155,17 @@ const NavMobile = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null;
             </div>
           ))}
         </div>
-        <div className="w-fit flex gap-5 h-fit">
-          {socialMedia?.map((icon: SocialMedia) => (
-            <Fragment key={icon.title}>
-              <Display title={icon.title} href={icon.href} displayIcon={icon.displayIcon} wSize={"w-12"} hSize={"h-12"} />
-            </Fragment>
-          ))}
+        <div className="flex flex-col justify-center items-center gap-10">
+          <div className="w-fit flex gap-5 h-fit">
+            {socialMedia?.map((icon: SocialMedia) => (
+              <Fragment key={icon.title}>
+                <Display title={icon.title} href={icon.href} displayIcon={icon.displayIcon} wSize={"w-12"} hSize={"h-12"} />
+              </Fragment>
+            ))}
+          </div>
+          <Link target="_blank" href={`mailto:${email}`} className=" text-neutrals-400">
+            &#47;&#42; Say hello &#42;&#47;
+          </Link>
         </div>
       </motion.div>
     </div>
