@@ -73,7 +73,7 @@ export default async function RootLayout({
         <meta property="og:url" content="https://rrubyitzuchen.vercel.app" />
         <meta property="og:site_name" content="Ruby Yi Tzu Chen" />
         <meta property="og:locale" content="zh_TW" />
-        <meta property="og:image:url" content="/images/openGraph/1200_630.png" />
+        <meta property="og:image:url" content="/images/openGraph/1200x630.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="My custom alt" />
