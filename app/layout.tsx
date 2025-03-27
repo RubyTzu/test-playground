@@ -20,8 +20,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Ruby Yi Tzu Chen",
-  description: "I am an explorer passionate about learning new skills, with a diverse background in design, development, and website operations, all while emphasizing communication, collaboration, and organization",
-  
+  description: "I am an explorer passionate about learning new skills.",
+
 };
 
 export default async function RootLayout({
