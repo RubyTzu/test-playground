@@ -19,9 +19,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Next JS Test",
-  description: "A place for me to practice NextJS",
-  metadataBase: new URL("https://nextjs-dasboard-woad.vercel.app"),
+  title: "Ruby Yi Tzu Chen",
+  description: "An explorer passionate about learning new skills.",
+  metadataBase: new URL("https://rrubyitzuchen.vercel.app"),
   alternates: {
     canonical: "/",
     languages: {
