@@ -9,7 +9,7 @@ export const SectionTitle = ({ children }: { children: React.ReactNode }) => {
   return (
     <section className="pt-20 pb-10" ref={ref}>
       <motion.div
-        className="w-full text-center text-[36px] font-semibold"
+        className="w-fit text-[28px] font-semibold md:text-[36px]"
         initial={{ opacity: 0, x: -20 }}
         animate={{
           opacity: isInView ? 1 : 0,
