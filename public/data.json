@@ -1,23 +1,23 @@
 {
     "intro": {
         "name": "Ruby Chen",
-        "intro": "This is a place to let me practice web skill.",
+        "intro": "An explorer passionate about learning new skills, with a diverse background in design, development, and website operations, all while emphasizing communication, collaboration, and organization.",
         "img": "/images/TEST_JPG.jpg",
-        "resumeUrl": "/",
+        "resumeUrl": "https://docs.google.com/document/d/1buL7aPkKzV5NjToUbiovmGgHCseG1PdlvW7JLPk35GA/edit?usp=sharing",
         "socialMedia": [
             {
                 "title": "BH",
-                "href": "https://www.behance.net",
+                "href": "https://www.behance.net/rrubyitzuchen",
                 "displayIcon": "BehanceIcon"
             },
             {
                 "title": "GH",
-                "href": "https://github.com/",
+                "href": "https://github.com/RubyTzu",
                 "displayIcon": "GitHubIcon"
             },
             {
                 "title": "LI",
-                "href": "https://tw.linkedin.com",
+                "href": "https://www.linkedin.com/in/rrubyitzuchen/",
                 "displayIcon": "LinkedInIcon"
             }
         ],
@@ -43,9 +43,26 @@
     },
     "about": {
         "aboutMe": {
-            "description": "Try to introduce myself in this paragraph, but exactly what to say is a mystery. Typing is a kind of way to say something.",
+            "description": "Hi! I am Ruby Yi Tzu Chen, you can call me Ruby :)\n\nMy passion for design and development has led me through roles such as interaction designer, visual marketing designer, front-end developer, and currently, website operations specialist. I’m curious, always eager to learn, and excited about the future and my continued growth.",
             "img": "/images/TEST_JPG.jpg"
         },
+        "skillsSum": [
+            {
+                "id": "1",
+                "title": "Web Skills",
+                "number": 10
+            },
+            {
+                "id": "2",
+                "title": "Languages",
+                "number": 3
+            },
+            {
+                "id": "3",
+                "title": "Certifications",
+                "number": 2
+            }
+        ],
         "skills": [
             {
                 "id": "1",
@@ -59,115 +76,170 @@
             },
             {
                 "id": "3",
+                "title": "Tailwind CSS",
+                "level": "95%"
+            },
+            {
+                "id": "4",
                 "title": "JavaScript",
                 "level": "70%"
             },
             {
-                "id": "4",
-                "title": "Tailwind CSS",
-                "level": "80%"
-            },
-            {
                 "id": "5",
-                "title": "NodeJS",
-                "level": "60%"
-            },
-            {
-                "id": "6",
-                "title": "ReactJS",
-                "level": "70%"
-            },
-            {
-                "id": "7",
-                "title": "Web Management",
-                "level": "95%"
-            },
-            {
-                "id": "8",
-                "title": "Git",
-                "level": "70%"
-            },
-            {
-                "id": "9",
                 "title": "TypeScript",
                 "level": "60%"
             },
             {
-                "id": "10",
-                "title": "Motion",
+                "id": "6",
+                "title": "NodeJS",
+                "level": "60%"
+            },
+            {
+                "id": "7",
+                "title": "ReactJS",
                 "level": "80%"
             },
             {
+                "id": "8",
+                "title": "NextJS",
+                "level": "80%"
+            },
+            {
+                "id": "9",
+                "title": "motion.dev",
+                "level": "80%"
+            },
+            {
+                "id": "10",
+                "title": "Git",
+                "level": "70%"
+            },
+            {
                 "id": "11",
+                "title": "GitHub",
+                "level": "70%"
+            },
+            {
+                "id": "12",
+                "title": "Notion",
+                "level": "80%"
+            },
+            {
+                "id": "13",
                 "title": "AEM",
                 "level": "60%"
             },
             {
-                "id": "12",
+                "id": "14",
                 "title": "JIRA",
                 "level": "60%"
+            },
+            {
+                "id": "15",
+                "title": "Web Management",
+                "level": "95%"
+            },
+            {
+                "id": "16",
+                "title": "Web Design",
+                "level": "80%"
+            },
+            {
+                "id": "17",
+                "title": "Web Development",
+                "level": "80%"
+            },
+            {
+                "id": "18",
+                "title": "Web Operation",
+                "level": "95%"
+            },
+            {
+                "id": "19",
+                "title": "Figma",
+                "level": "80%"
+            },
+            {
+                "id": "20",
+                "title": "Photoshop",
+                "level": "80%"
+            },
+            {
+                "id": "21",
+                "title": "Illustrator",
+                "level": "80%"
+            },
+            {
+                "id": "22",
+                "title": "After Effects",
+                "level": "60%"
+            },
+            {
+                "id": "23",
+                "title": "Premiere Pro",
+                "level": "70%"
             }
         ],
         "experiences": [
             {
-                "title": "First",
-                "description": "Happy first job ever, the colleagues were nice and the projects were fun, yet I want to explore the world more.",
+                "title": "Interaction Designer",
+                "description": "Specialize in the design and planning of interactive exhibition.",
                 "id": 1,
-                "subtitleOne": "First Job place",
-                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
+                "subtitleOne": "AXIS 3D Technology Inc. - Pixelight",
+                "subtitleTwo": "2018.08 - 2022.02 | Taipei, Taiwan"
             },
             {
-                "title": "Second",
-                "description": "Temp Job for transition of my next career, great operating team.",
+                "title": "Visual Marketing Designer",
+                "description": "Design product-related images, such as Amazon listings.",
                 "id": 2,
-                "subtitleOne": "Second Job place",
-                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
+                "subtitleOne": "EcomPlus Global CO., LTD.",
+                "subtitleTwo": "2022.03 - 2022.06 | Taipei, Taiwan"
             },
             {
-                "title": "Third",
-                "description": "Nice opportunity for developer newbies, yet the dev team seems to be disbanding at any moment.",
+                "title": "Frontend Developer",
+                "description": "Create several static web pages and an interactive game.",
                 "id": 3,
-                "subtitleOne": "Third Job place",
-                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
+                "subtitleOne": "Asia Road Technology Co.Ltd",
+                "subtitleTwo": "2024.01 - 2024.03 | Taipei, Taiwan"
             },
             {
-                "title": "Fourth",
-                "description": "Keep going and beyond",
+                "title": "Website Operation Specialist",
+                "description": "Manage localized web content and provide technical support.",
                 "id": 4,
-                "subtitleOne": "Fourth Job place",
-                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
+                "subtitleOne": "Cheil WorldWide",
+                "subtitleTwo": "2024.03 - present | Taipei, Taiwan"
             }
         ],
         "educations": [
             {
-                "title": "First",
-                "description": "University is where I met my best friends.",
+                "title": "Shih Chien University",
+                "description": "Mostly designing interactive project such as interactive projection, VR... etc.",
                 "id": 1,
-                "subtitleOne": "Communication Design",
-                "subtitleTwo": "20xx - 20xx | Taipei, Taiwan"
+                "subtitleOne": "Communications Design, BFA",
+                "subtitleTwo": "2014.09 - 2018.06 | Taipei, Taiwan"
             },
             {
-                "title": "Second",
-                "description": "Truly taught me how to write codes.",
+                "title": "ALPHA Camp Bootcamp",
+                "description": "Completed several websites as a front-end developer, API integrator, and project coordinator.",
                 "id": 2,
                 "subtitleOne": "Frontend Development",
-                "subtitleTwo": "20xx - 20xx | online course"
+                "subtitleTwo": "2023.01 - 2023.07 | online course"
             }
         ]
     },
     "project": [
         {
             "id": 1,
-            "title": "Ocean",
-            "description": "I love this work so much, so proud to be involve in this project.",
+            "title": "Bridging Humans and the Ocean",
+            "description": "An immersive exhibition exploring the human-coral relationship.",
             "time": "2021",
             "img": "/images/TEST_JPG.jpg",
             "gif": "/images/GIF/TEST_GIF.gif",
             "longImg": "/images/TEST_JPG.jpg",
-            "longDescription": "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 1.",
-            "brainStormingDescription": "explaining what I am doing to people who know and try to make it look easy 1.",
-            "makingDescription": "making is where magic happened 1.",
-            "outComeDescription": "appreciate for any help 1.",
+            "longDescription": "This is one of my previous designer works, my role includes designing display panels, interactive game UI, and assisting in game planning, animation design, exhibition shooting, and video editing.",
+            "brainStormingDescription": "We started by creating the poster, followed by the main visual for the entire exhibition. We learned that the project would focus on the relationship between coral and humans, so sea colors were naturally incorporated.",
+            "makingDescription": "We were fascinated by the story of corals and people, which inspired us to design an immersive, interactive, ocean-themed exhibit. I used these tools to complete this amazing exhibition design journey: Adobe Illustrator, Photoshop, Premiere Pro, After Effects, and Unity2D.\n\nThrough team collaboration, we produced all the interactive elements in just six months. The process began with designing on the computer, and after extensive discussions with the client, we moved to the exhibit site to continue our work. Transforming the exhibit from raw materials to a lively interactive project was truly a magnificent experience.",
+            "outComeDescription": "The exhibit features a highly realistic underwater coral reef entrance simulation, followed by an interactive table with models of several coral species introducing themselves, a half-projected wall showing the coral farming process, a full interactive wall explaining the ROV, and last but not least, the deep-sea multimedia room.\n\nAt the start of the exhibition, you'll enter a light blue sea area, and as you move deeper into the exhibit, the space gradually becomes darker with each step, eventually leading you to the deep-sea area. This immersive interactive experience will help you better understand the relationship between coral and humans, allowing you to explore all the marvelous details and refresh your knowledge about them.",
             "brainStormingImg": [
                 "/images/TEST_JPG.jpg",
                 "/images/TEST_JPG.jpg",
@@ -176,7 +248,7 @@
             "makingImg": "/images/TEST_JPG.jpg",
             "outComeImg": "/images/TEST_JPG.jpg",
             "videoImg": "/images/TEST_YOUTUBE.jpg",
-            "videoUrl": "https://www.youtube.com/watch?v=vEhD5WwCo44",
+            "videoUrl": "https://player.vimeo.com/video/659837276?h=d12bd533ea",
             "demoUrl": "/"
         },
         {

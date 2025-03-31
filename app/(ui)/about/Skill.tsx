@@ -3,27 +3,30 @@ import { useRef } from "react";
 import { useInView, motion } from "motion/react";
 import { SectionTitle } from "@/app/(ui)/shareComponent/SectionTitle";
 import { useAboutContext } from "@/app/(data)/Provider";
+import { SkillsSumType } from "@/app/(data)/types";
+import { clsx } from "clsx";
 
 export const Skills = () => {
+  const skillsSum = useAboutContext().skillsSum || [];
   const skills = useAboutContext().skills || [];
 
   return (
     <div>
-      <div className="flex flex-col justify-between items-center pb-8 md:items-center md:pb-0 md:flex-row">
+      <div className="flex flex-col justify-between pb-8 md:items-start md:pb-0 md:flex-row">
         <SectionTitle>Skills</SectionTitle>
-        <div className="flex justify-between items-center">
-          <div className="md:pr-[6.5rem] flex flex-col md:items-end">
-            <div>10+</div>
-            <div>Web Skill</div>
-          </div>
-          <div className="md:pr-[5rem] flex flex-col md:items-end">
-            <div>3+</div>
-            <div>Languages</div>
-          </div>
-          <div className="flex flex-col md:items-end">
-            <div>2+</div>
-            <div>Certifications</div>
-          </div>
+        <div className="flex justify-between md:items-center md:pt-[5.5rem]">
+          {skillsSum.map((skillSum: SkillsSumType) => {
+            return (
+              <div
+                key={skillSum.id}
+                className={clsx("flex flex-col md:items-end", {
+                  "md:pr-[5.5rem]": Number(skillSum.id) !== skillsSum.length,
+                })}>
+                <div>{skillSum.number}+</div>
+                <div>{skillSum.title}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="grid gap-4 grid-cols-2 md:grid-cols-6">

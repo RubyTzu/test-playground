@@ -24,6 +24,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* s: custom ul "*" */
+ul {
+  --icon-size: 1em;
+  --gutter: .3em;
+  padding: 0 0 0 var(--icon-size);
+}
+
+ul li {
+  padding-left: var(--gutter);
+}
+
+ul li::marker {
+  content: "*";
+  font-size: var(--icon-size);
+}
+/* e: custom ul "*" */
+
 body::before {
   content: "";
   position: absolute;
@@ -33,8 +50,8 @@ body::before {
   display: block;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50%, #fff 0%, #fffffe 20%);
-  mask-image: url('/images/dissolve.png');
+  background: radial-gradient(circle at 50%, #fff 0%, #fffefe 60%);
+  mask-image: url("/images/dissolve.png");
 }
 
 /* body::before {

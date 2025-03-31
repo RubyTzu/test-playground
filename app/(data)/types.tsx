@@ -18,6 +18,7 @@ export interface Route {
 }
 export interface About {
   aboutMe: AboutMeType;
+  skillsSum: SkillsSumType[];
   skills: SkillsType[];
   experiences: Item[];
   educations: Item[];
@@ -25,6 +26,11 @@ export interface About {
 export interface AboutMeType {
   description: string;
   img: string;
+}
+export interface SkillsSumType {
+  id: string;
+  title: string;
+  number: number;
 }
 export interface SkillsType {
   id: string;

@@ -29,7 +29,7 @@ const config: Config = {
       boxShadow: {
         whiteBlur: "0px 0px 20px 20px rgb(253, 252, 250)",
         yellowWhiteBlur: "0px 0px 20px 50px rgb(253, 251, 248)",
-      },
+      }
     },
   },
   plugins: [],

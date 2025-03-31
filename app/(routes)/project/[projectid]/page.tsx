@@ -6,6 +6,7 @@ import { ProjectOnePicture } from "@/app/(ui)/project/singleProject/ProjectOnePi
 import { ProjectDetails } from "@/app/(data)/types";
 import { ProjectOneVideo } from "@/app/(ui)/project/singleProject/ProjectOneVideo";
 import { useProjectContext } from "@/app/(data)/Provider";
+import { ProjectStaffDetail } from "@/app/(ui)/project/singleProject/ProjectStaffDetail";
 
 export default function Page() {
   const { projectid } = useParams<{ projectid: string }>();
@@ -14,14 +15,16 @@ export default function Page() {
 
   return (
     <>
-        {projectDatas.length !== 0 ?
-          <div className="flex flex-col gap-36 md:gap-48 xl:gap-80">
-        <ProjectIntro projectData={projectData} />
-        <ProjectThreePictures projectData={projectData} title="- Brainstorming" />
-        <ProjectOnePicture projectData={projectData} title={"- Making"} />
-        <ProjectOneVideo projectData={projectData} title={"- Outcome"} />
-      </div>
-      :null}
-      </>
+      {projectDatas.length !== 0 ? (
+        <div className="flex flex-col gap-36 md:gap-48 xl:gap-80">
+          <ProjectIntro projectData={projectData} />
+          <ProjectThreePictures projectData={projectData} title="- Brainstorming" />
+          <ProjectOnePicture projectData={projectData} title={"- Making"} />
+          <ProjectOneVideo projectData={projectData} title={"- Outcome"} />
+          <ProjectStaffDetail projectData={projectData} title={"-"} />
+
+        </div>
+      ) : null}
+    </>
   );
 }
