@@ -270,7 +270,7 @@
             ],
             "makingImg": "/images/TEST2_JPG.jpg",
             "outComeImg": "/images/TEST2_JPG.jpg",
-            "videoImg": "/images/TEST2_YOUTUBE.jpg",
+            "videoImg": "/images/TEST5_YOUTUBE.jpg",
             "videoUrl": "https://www.youtube.com/watch?v=vEhD5WwCo44",
             "demoUrl": "/"
         },
@@ -302,9 +302,9 @@
             "title": "Store Location",
             "description": "Small little project.",
             "time": "2024",
-            "img": "/images/TEST4_JPG.jpg",
+            "img": "/images/projects/StoreLocation/StoreLocation_Main_org.jpg",
             "gif": "/images/GIF/TEST_GIF.gif",
-            "longImg": "/images/TEST4_JPG.jpg",
+            "longImg": "/images/projects/StoreLocation/StoreLocation_Main_org.jpg",
             "longDescription": "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 4.",
             "brainStormingDescription": "explaining what I am doing to people who know and try to make it look easy 4.",
             "makingDescription": "making is where magic happened 4.",
@@ -316,8 +316,8 @@
             ],
             "makingImg": "/images/TEST4_JPG.jpg",
             "outComeImg": "/images/TEST4_JPG.jpg",
-            "videoImg": "/images/TEST4_YOUTUBE.jpg",
-            "videoUrl": "https://www.youtube.com/watch?v=vEhD5WwCo44",
+            "videoImg": "/images/projects/StoreLocation/StoreLocation_Main.jpg",
+            "videoUrl": "https://player.vimeo.com/video/1071005605?h=894ac9e19b",
             "demoUrl": "https://table-store-iota.vercel.app/"
         },
         {
