@@ -66,8 +66,29 @@ export interface ProjectDetails extends Project {
   videoImg: string;
   videoUrl: string;
   demoUrl: string;
+  time: string;
+  longTitle: string;
+  type: string;
+  credits: Credit[];
+  cta: Cta[];
+  hashtag: Hashtag[];
 }
 
+export interface Credit {
+  id: string;
+  title: string;
+  subTitle: string;
+}
+export interface Cta {
+  id: string;
+  title: string;
+  url: string;
+}
+
+export interface Hashtag {
+  id: string;
+  title: string;
+}
 export interface Article {
   id: number;
   title: string;

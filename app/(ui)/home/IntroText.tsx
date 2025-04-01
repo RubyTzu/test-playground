@@ -8,9 +8,9 @@ const { name = "", intro = "", resumeUrl = "" } = useIntroContext() || {};
 
   return (
     <>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 items-center">
         <motion.div
-          className="text-center"
+          className="text-center text-xl font-medium uppercase"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -20,7 +20,7 @@ const { name = "", intro = "", resumeUrl = "" } = useIntroContext() || {};
           {name}
         </motion.div>
         <motion.div
-          className="text-center"
+          className="text-center md:w-[70%] mb-6"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{

@@ -1,7 +1,7 @@
 {
     "intro": {
         "name": "Ruby Chen",
-        "intro": "An explorer passionate about learning new skills, with a diverse background in design, development, and website operations, all while emphasizing communication, collaboration, and organization.",
+        "intro": "An explorer passionate about learning new skills, with a strong focus on communication, collaboration, and organization.",
         "img": "/images/TEST_JPG.jpg",
         "resumeUrl": "https://docs.google.com/document/d/1buL7aPkKzV5NjToUbiovmGgHCseG1PdlvW7JLPk35GA/edit?usp=sharing",
         "socialMedia": [
@@ -232,7 +232,6 @@
             "id": 1,
             "title": "Bridging Humans and the Ocean",
             "description": "An immersive exhibition exploring the human-coral relationship.",
-            "time": "2021",
             "img": "/images/TEST_JPG.jpg",
             "gif": "/images/GIF/TEST_GIF.gif",
             "longImg": "/images/TEST_JPG.jpg",
@@ -249,20 +248,71 @@
             "outComeImg": "/images/TEST_JPG.jpg",
             "videoImg": "/images/TEST_YOUTUBE.jpg",
             "videoUrl": "https://player.vimeo.com/video/659837276?h=d12bd533ea",
-            "demoUrl": "/"
+            "demoUrl": "",
+            "time": "2021",
+            "longTitle": "Bridging Humans and the Ocean - Dive into Coral Reefs",
+            "type": "Interaction Exhibition",
+            "credits": [
+                {
+                    "id": "1",
+                    "title": "My Role",
+                    "subTitle": "Design Planner / 2D Visual Designer / UIUX Designer / Video Editor"
+                },
+                {
+                    "id": "2",
+                    "title": "Client",
+                    "subTitle": "NMMBA_tw"
+                },
+                {
+                    "id": "3",
+                    "title": "Director",
+                    "subTitle": "Maxray Lin"
+                },
+                {
+                    "id": "4",
+                    "title": "Project Manager",
+                    "subTitle": "Violet Peng / Trekkie Su"
+                },
+                {
+                    "id": "5",
+                    "title": "Designer",
+                    "subTitle": "Ruby Chen / Ruby Chang / Suntas Hsueh / Violet Pen"
+                },
+                {
+                    "id": "6",
+                    "title": "Programmer",
+                    "subTitle": "Sam Liu / Andy Wu / Alex Lin"
+                }
+            ],
+            "cta": [
+                {
+                    "id": "1",
+                    "title": "View on Behance",
+                    "url": "https://www.behance.net/gallery/133772967/_"
+                }
+            ],
+            "hashtag": [
+                {
+                    "id": 1,
+                    "title": "Exhibition"
+                },
+                {
+                    "id": 2,
+                    "title": "UIUXDesign"
+                }
+            ]
         },
         {
             "id": 2,
             "title": "Simple Twitter",
-            "description": "Surely teach me how to write code.",
-            "time": "2023",
+            "description": "As the name suggests, it's an easier version of Twitter.",
             "img": "/images/TEST2_JPG.jpg",
             "gif": "/images/GIF/TEST_GIF.gif",
             "longImg": "/images/TEST2_JPG.jpg",
-            "longDescription": "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 2.",
-            "brainStormingDescription": "explaining what I am doing to people who know and try to make it look easy 2.",
-            "makingDescription": "making is where magic happened 2.",
-            "outComeDescription": "appreciate for any help 2.",
+            "longDescription": "This project is the final project of Alpha Camp online web development boot camp. It helped me gain a comprehensive understanding of web development.",
+            "brainStormingDescription": "This is the first project I started as a front-end developer. I learned by going through persona research, following the roadmap to becoming a front-end developer, and using an efficient to-do list with my teammates, which consisted of two front-end developers and two back-end developers in total.",
+            "makingDescription": "It took us a whole month to create this lightweight website. I gained experience in project management and used the following tools: ReactJS, Bootstrap CSS, CSS Modules, Git, and API integration.\n\nWe divided the work into creating separate components and researching API connections. Thanks to the collaboration of my front-end teammate, we successfully completed the project ahead of schedule.",
+            "outComeDescription": "On Simple Twitter, you need to log in to the site, after which you can tweet, write a tweet, like a tweet, and edit a tweet. You can also manage users and tweets through the admin page.\n\nAdditionally, there are various alerts on the site to ensure you don't exceed the word limit, choose an already taken user ID, and more. Due to the backend data being unreachable, this site cannot be accessed right now. However, you can still watch the video to see how it goes.",
             "brainStormingImg": [
                 "/images/TEST2_JPG.jpg",
                 "/images/TEST2_JPG.jpg",
@@ -271,21 +321,62 @@
             "makingImg": "/images/TEST2_JPG.jpg",
             "outComeImg": "/images/TEST2_JPG.jpg",
             "videoImg": "/images/TEST5_YOUTUBE.jpg",
-            "videoUrl": "https://www.youtube.com/watch?v=vEhD5WwCo44",
-            "demoUrl": "/"
+            "videoUrl": "https://player.vimeo.com/video/885056832?h=d6922c812b",
+            "demoUrl": "",
+            "time": "2023",
+            "longTitle": "Simple Twitter - Alpha Camp Final Project",
+            "type": "Social Media Dynamic Website",
+            "credits": [
+                {
+                    "id": "1",
+                    "title": "My Role",
+                    "subTitle": "Frontend Developer /  API Integrator / Project Coordinator"
+                },
+                {
+                    "id": "2",
+                    "title": "Frontend Developer",
+                    "subTitle": "Ruby Chen / Kaijun Huang"
+                },
+                {
+                    "id": "3",
+                    "title": "Backend Developer",
+                    "subTitle": "Ching Lin / Ben Wang"
+                }
+            ],
+            "cta": [
+                {
+                    "id": "1",
+                    "title": "View on gitHub",
+                    "url": "https://github.com/RubyTzu/simple-twitter"
+                },
+                {
+                    "id": "2",
+                    "title": "Read More",
+                    "url": "https://medium.com/@rrubyitzuchen/ac-simple-twitter-%E9%96%8B%E7%99%BC%E7%B6%93%E9%A9%97%E5%8F%8D%E6%80%9D-af0311589348"
+                }
+            ],
+            "hashtag": [
+                {
+                    "id": 1,
+                    "title": "DynamicWebsite"
+                },
+                {
+                    "id": 2,
+                    "title": "Frontend"
+                }
+            ]
         },
         {
             "id": 3,
-            "title": "LaBar game",
-            "description": "A little project that I joint.",
-            "time": "2024",
+            "title": "LaBar Game",
+            "description": "A simple slot machine game.",
             "img": "/images/TEST3_JPG.jpg",
             "gif": "/images/GIF/TEST_GIF.gif",
             "longImg": "/images/TEST3_JPG.jpg",
-            "longDescription": "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 3.",
-            "brainStormingDescription": "explaining what I am doing to people who know and try to make it look easy 3.",
-            "makingDescription": "making is where magic happened 3.",
-            "outComeDescription": "appreciate for any help 3.",
+            "longDescription": "A simple slot machine game created for the purpose of drawing a lucky red envelope given after the Lunar New Year holiday when work resumes. This event has ended, so the website link is no longer functional.",
+            "brainStormingDescription": "We created this little game simply because it's the easiest way to have some fun and also let the boss randomly choose who will receive the amount of money.",
+            "makingDescription": "The designer quickly created a visual design, and I followed up on her work using plain HTML, CSS, and JavaScript, with animation controlled by jQuery.",
+            "outComeDescription": "Simply click the lever of the slot machine, and you will see three icons on the screen. The combination of these icons will determine the final prize you will receive. The slot machine game ultimately allowed over 15 company employees to each receive a bonus ranging from 200 to 2,000 TWD.",
             "brainStormingImg": [
                 "/images/TEST3_JPG.jpg",
                 "/images/TEST3_JPG.jpg",
@@ -294,21 +385,61 @@
             "makingImg": "/images/TEST3_JPG.jpg",
             "outComeImg": "/images/TEST3_JPG.jpg",
             "videoImg": "/images/TEST3_YOUTUBE.jpg",
-            "videoUrl": "https://www.youtube.com/watch?v=vEhD5WwCo44",
-            "demoUrl": "/"
+            "videoUrl": "https://player.vimeo.com/video/917820233?h=e7e3f3eaf3",
+            "demoUrl": "",
+            "time": "2024",
+            "longTitle": "LaBar Game - noonspace Bonus",
+            "type": "Interactive Game",
+            "credits": [
+                {
+                    "id": "1",
+                    "title": "My Role",
+                    "subTitle": "Frontend Developer"
+                },
+                {
+                    "id": "2",
+                    "title": "Client",
+                    "subTitle": "Asia Road Technology Co.Ltd - noonspace"
+                },
+                {
+                    "id": "3",
+                    "title": "UI Designer",
+                    "subTitle": "Jiayu Shao"
+                },
+                {
+                    "id": "4",
+                    "title": "Frontend Developer",
+                    "subTitle": "Ruby Chen"
+                },
+                {
+                    "id": "5",
+                    "title": "Backend Developer",
+                    "subTitle": "Away Wu"
+                }
+            ],
+            "cta": [],
+            "hashtag": [
+                {
+                    "id": 1,
+                    "title": "InteractiveGame"
+                },
+                {
+                    "id": 2,
+                    "title": "Frontend"
+                }
+            ]
         },
         {
             "id": 4,
-            "title": "Store Location",
-            "description": "Small little project.",
-            "time": "2024",
+            "title": "Store Location Table",
+            "description": "A table used to allow customers to easily find store locations, categorized by region.",
             "img": "/images/projects/StoreLocation/StoreLocation_Main_org.jpg",
             "gif": "/images/GIF/TEST_GIF.gif",
             "longImg": "/images/projects/StoreLocation/StoreLocation_Main_org.jpg",
-            "longDescription": "This is where description goes to. Try to type more values in here to make it looks good. Try to type more word but still fit. Exactly what am I talking about is a mystery 4.",
-            "brainStormingDescription": "explaining what I am doing to people who know and try to make it look easy 4.",
-            "makingDescription": "making is where magic happened 4.",
-            "outComeDescription": "appreciate for any help 4.",
+            "longDescription": "Searching for a store location from an endless list can be daunting. I created an easily categorized list that can be quickly narrowed down to a concise list, showing only one region at a time. I have classified the list according to the major regions of Taiwan, namely \"Northern District\", \"Central District\" and \"Southern District\".",
+            "brainStormingDescription": "I wanted to create a simple table, but the list was too long to fit in a single scroll on the screen. So, I came up with the idea of creating a categorized table.",
+            "makingDescription": "To create the table, I carefully organized the list of store locations and ensured that the Google Map links were in the same format. This is a simple table website built using tools like Tailwind CSS, Next.js, Vercel, and Git.",
+            "outComeDescription": "The final table is categorized by the navbar at the top, which includes \"North\", \"Central\", \"South\", and \"All Region\". You can click on the desired region you wish to explore, and the table will change accordingly.",
             "brainStormingImg": [
                 "/images/TEST4_JPG.jpg",
                 "/images/TEST4_JPG.jpg",
@@ -318,19 +449,39 @@
             "outComeImg": "/images/TEST4_JPG.jpg",
             "videoImg": "/images/projects/StoreLocation/StoreLocation_Main.jpg",
             "videoUrl": "https://player.vimeo.com/video/1071005605?h=894ac9e19b",
-            "demoUrl": "https://table-store-iota.vercel.app/"
+            "demoUrl": "https://table-store-iota.vercel.app/",
+            "time": "2024",
+            "longTitle": "Store Location Table",
+            "type": "Static Website",
+            "credits": [
+                {
+                    "id": "1",
+                    "title": "My Role",
+                    "subTitle": "UI Designer / Frontend Developer"
+                }
+            ],
+            "cta": [],
+            "hashtag": [
+                {
+                    "id": 1,
+                    "title": "StaticWebsite"
+                },
+                {
+                    "id": 2,
+                    "title": "Frontend"
+                }
+            ]
         },
         {
             "id": 5,
-            "title": "Chill split",
+            "title": "Chill Split",
             "description": "This is an app made to split friends and family's bill. You can easily split it during a trip or a monthly spending conclusion.",
-            "time": "2024",
             "img": "/images/TEST5_JPG.jpg",
             "gif": "/images/GIF/TEST_GIF.gif",
             "longImg": "/images/TEST5_JPG.jpg",
             "longDescription": "A bill splitting app project proudly made by three partners, a front-end, a back-end and a designer.It is also made with the LINE Front-end Framework (LIFF) app, making it easy for anyone registered with Line to use.",
             "brainStormingDescription": "We first decided on a name for the app, then updated the prototype and conducted weekly research. Everything is documented in Notion, from the initial sketch of the plan to the final meeting minutes.",
-            "makingDescription": "As the front-end developer on the team, I play a crucial role as a bridge between the other two members. Whether it's discussing slight animations for the user interface or how the APIs should be handed off, we spend a significant amount of time ensuring everything works as smoothly and precisely as it should. I completed it using the Next.js framework, CSS tools like Tailwind CSS, and animation tools like Motion (formerly known as Framer Motion). I also used Git for team collaboration and integrated APIs by simulating with json-server and connecting to actual APIs with the help of tools like Apidog. The creation of the calculator is thanks to Stack Overflow users and the countless issues I was able to resolve with help from the platform.",
+            "makingDescription": "As the front-end developer on the team, I play a crucial role as a bridge between the other two members. Whether it's discussing slight animations for the user interface or how the APIs should be handed off, we spend a significant amount of time ensuring everything works as smoothly and precisely as it should.\n\nI completed it using the Next.js framework, CSS tools like Tailwind CSS, and animation tools like Motion (formerly known as Framer Motion). I also used Git for team collaboration and integrated APIs by simulating with json-server and connecting to actual APIs with the help of tools like Apidog. The calculator was created thanks to Stack Overflow users who helped me solve countless problems.",
             "outComeDescription": "The result of \"Chill Split\" may not be perfect, but it's a great kickstart for my career transition. I collaborated with an excellent UI/UX designer and a dedicated backend developer. We made the app capable of splitting costs in TWD, categorizing expenses, grouping by date, adding notes, adding members, allowing different amounts for the same expense, and editing all the features mentioned above, among others.",
             "brainStormingImg": [
                 "/images/TEST5_JPG.jpg",
@@ -341,7 +492,49 @@
             "outComeImg": "/images/TEST5_JPG.jpg",
             "videoImg": "/images/TEST5_YOUTUBE.jpg",
             "videoUrl": "https://www.youtube.com/watch?v=vEhD5WwCo44",
-            "demoUrl": "https://cost-sharing-app-git-staging-samchlius-projects.vercel.app/"
+            "demoUrl": "https://cost-sharing-app-git-staging-samchlius-projects.vercel.app/",
+            "time": "2024",
+            "longTitle": "Chill Trips, Easy Splits",
+            "type": "Dynamic website for split bills",
+            "credits": [
+                {
+                    "id": "1",
+                    "title": "My Role",
+                    "subTitle": "Frontend Developer / Minute taker"
+                },
+                {
+                    "id": "2",
+                    "title": "UIUX Designer",
+                    "subTitle": "Wanyu Chen"
+                },
+                {
+                    "id": "3",
+                    "title": "Frontend Developer",
+                    "subTitle": "Ruby Chen"
+                },
+                {
+                    "id": "4",
+                    "title": "Backend Developer",
+                    "subTitle": "Sam Liu"
+                }
+            ],
+            "cta": [
+                {
+                    "id": "1",
+                    "title": "View on Notion",
+                    "url": "/"
+                }
+            ],
+            "hashtag": [
+                {
+                    "id": 1,
+                    "title": "DynamicWebsite"
+                },
+                {
+                    "id": 2,
+                    "title": "Frontend"
+                }
+            ]
         }
     ],
     "article": [

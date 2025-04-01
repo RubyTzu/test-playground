@@ -1,10 +1,11 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "motion/react";
 import { SectionTitle } from "@/app/(ui)/shareComponent/SectionTitle";
 import { useAboutContext } from "@/app/(data)/Provider";
 import { SkillsSumType } from "@/app/(data)/types";
 import { clsx } from "clsx";
+import { animate } from "motion";
 
 export const Skills = () => {
   const skillsSum = useAboutContext().skillsSum || [];
@@ -22,7 +23,9 @@ export const Skills = () => {
                 className={clsx("flex flex-col md:items-end", {
                   "md:pr-[5.5rem]": Number(skillSum.id) !== skillsSum.length,
                 })}>
-                <div>{skillSum.number}+</div>
+                <div>
+                  <UseAnimatedCounter maxValue={skillSum.number} initialValue={0} duration={1} />+
+                </div>
                 <div>{skillSum.title}</div>
               </div>
             );
@@ -36,6 +39,22 @@ export const Skills = () => {
       </div>
     </div>
   );
+};
+
+const UseAnimatedCounter = ({ maxValue, initialValue, duration }: { maxValue: number; initialValue: number; duration: number }) => {
+  const [counter, setCounter] = useState<number>(initialValue);
+
+  useEffect(() => {
+    const controls = animate(initialValue, maxValue, {
+      duration,
+      onUpdate: (latest) => {
+         setCounter(Math.round(latest));
+      },
+    });
+    return () => controls.stop();
+  }, [initialValue, maxValue, duration]);
+
+  return counter;
 };
 
 const Skill = ({ id, title, lineWidth }: { id: string; title: string; lineWidth: string }) => {

@@ -1,34 +1,36 @@
 import { ProjectDetails } from "@/app/(data)/types";
 import Link from "next/link";
+import { Cta } from "@/app/(data)/types";
 
 export const ProjectStaffDetail = ({ projectData, title }: { projectData: ProjectDetails; title: string }) => {
-  console.log(projectData.id);
+
   return (
     <div className="mb-32">
       <div className="text-lg font-semibold pb-4">{title}</div>
       {title === "-" ? (
         <div>
-          <div className="font-medium">2021</div>
-          <div className="font-semibold">Bridging Humans and the Ocean - Dive into Coral Reefs</div>
-          <div>Interaction Exhibition</div>
+          <div className="font-medium">{projectData.time}</div>
+          <div className="font-semibold">{projectData.longTitle}</div>
+          <div>{projectData.type}</div>
           <br />
           <ul className="!list-outside">
-            <li>
-              <span className="text-zinc-600 font-medium">My Role - </span>
-              Design Planner / 2D Visual Designer / UIUX Designer / Video Editor
-            </li>
-            <li>
-              <span className="text-zinc-600 font-medium">Client - </span>NMMBA
-            </li>
-            <li><span className="text-zinc-600 font-medium">Director - </span>Maxray Lin</li>
-            <li><span className="text-zinc-600 font-medium">Project Manager -</span>Violet Peng / Trekkie Su</li>
-            <li><span className="text-zinc-600 font-medium">Designer - </span>Ruby Chen / Ruby Chang / Suntas Hsueh / Violet Peng</li>
-            <li><span className="text-zinc-600 font-medium">Programmer - </span>Sam Liu / Andy Wu / Alex Lin</li>
+            {projectData.credits.map((credit) => {
+              return (
+                <li key={credit.id}>
+                  <span className="text-zinc-600 font-medium">{credit.title} - </span>
+                  {credit.subTitle}
+                </li>
+              );
+            })}
           </ul>
-          <div className="mt-10 px-4 py-2  text-slate-600 text-base border-transparent border-l-slate-600 border-2 w-fit">
-            <Link target="_blank" href={"https://www.behance.net/gallery/133772967/_"}>
-              View on Behance&nbsp;&nbsp;&gt;
-            </Link>
+          <div className="grid grid-cols-1 md:gap-4 sm:grid-cols-3 md:grid-cols-4">
+            {projectData.cta.map((cta: Cta) => (
+              <div key={cta.id} className="mt-6 px-4 text-slate-600 text-base border-transparent border-l-slate-600 border-2 w-fit md:mt-10">
+                <Link target="_blank" href={cta.url}>
+                  {cta.title}&nbsp;&nbsp;&gt;
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       ) : null}
