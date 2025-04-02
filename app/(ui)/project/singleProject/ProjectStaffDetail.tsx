@@ -13,7 +13,7 @@ export const ProjectStaffDetail = ({ projectData, title }: { projectData: Projec
           <div className="font-semibold">{projectData.longTitle}</div>
           <div>{projectData.type}</div>
           <br />
-          <ul className="!list-outside">
+          <ul id="project_credit" className="!list-outside">
             {projectData.credits.map((credit) => {
               return (
                 <li key={credit.id}>

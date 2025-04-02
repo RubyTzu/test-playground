@@ -9,12 +9,22 @@ export const ProjectIntro = ({ projectData }: { projectData: ProjectDetails }) =
     <div className="mt-0 xl:mt-2">
       <div className="flex flex-col justify-between items-end md:items-center md:flex-row">
         <div className="text-3xl font-semibold w-full">{projectData.title}</div>
-        <div className="flex justify-between w-full items-center gap-5 pt-7 md:gap-6 md:pt-0 md:w-fit">
-          {projectData.demoUrl !== "" && (
-            <Link href={projectData.demoUrl} target="_blank" className="w-fit h-fit py-1 px-4 rounded-full bg-primary-300 text-primary-200">
-              Demo
-            </Link>
+        <div className="flex justify-end w-full items-center gap-5 pt-7 md:gap-6 md:pt-0 md:w-fit">
+          <div className="w-full">
+            {projectData.demoUrl !== "" && (
+            <motion.div
+              whileHover={{
+                backgroundColor: "#ffe3e0",
+                transition: { duration: 0.3, ease: [0, 0.1, 0.7, 1.01] },
+              }}
+              className="rounded-full w-fit border-2 border-primary-300 text-primary-300 bg-white py-1">
+              <Link href={projectData.demoUrl} target="_blank" className="w-fit h-fit py-2 px-4 ">
+                Demo
+              </Link>
+            </motion.div>
           )}
+          </div>
+          
           <motion.div initial={{ translateX: -1, opacity: 0, scale: 0.99 }} animate={{ translateX: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.3, ease: [0, 0.1, 0.7, 1.01] }}>
             <Link href={`/project/#${projectData.id}`} className="border-b-primary-300 border-b-2 cursor-pointer h-fit">
               Back

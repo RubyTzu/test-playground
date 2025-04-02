@@ -23,8 +23,8 @@ export const Skills = () => {
                 className={clsx("flex flex-col md:items-end", {
                   "md:pr-[5.5rem]": Number(skillSum.id) !== skillsSum.length,
                 })}>
-                <div>
-                  <UseAnimatedCounter maxValue={skillSum.number} initialValue={0} duration={1} />+
+                <div className="text-2xl">
+                  <UseAnimatedCounter maxValue={skillSum.number} initialValue={0} duration={1.2} />
                 </div>
                 <div>{skillSum.title}</div>
               </div>
@@ -42,19 +42,22 @@ export const Skills = () => {
 };
 
 const UseAnimatedCounter = ({ maxValue, initialValue, duration }: { maxValue: number; initialValue: number; duration: number }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   const [counter, setCounter] = useState<number>(initialValue);
 
   useEffect(() => {
     const controls = animate(initialValue, maxValue, {
       duration,
+      ease: [0.42, 0, 0.58, 1],
       onUpdate: (latest) => {
-         setCounter(Math.round(latest));
+        setCounter(Math.round(latest));
       },
     });
     return () => controls.stop();
-  }, [initialValue, maxValue, duration]);
+  }, [initialValue, maxValue, duration, isInView]);
 
-  return counter;
+  return <motion.div ref={ref}>{counter}+</motion.div>;
 };
 
 const Skill = ({ id, title, lineWidth }: { id: string; title: string; lineWidth: string }) => {

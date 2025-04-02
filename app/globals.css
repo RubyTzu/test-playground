@@ -25,17 +25,17 @@ body {
 }
 
 /* s: custom ul "*" */
-ul {
+#project_credit {
   --icon-size: 1em;
   --gutter: .3em;
   padding: 0 0 0 var(--icon-size);
 }
 
-ul li {
+#project_credit li {
   padding-left: var(--gutter);
 }
 
-ul li::marker {
+#project_credit li::marker {
   content: "*";
   font-size: var(--icon-size);
 }
