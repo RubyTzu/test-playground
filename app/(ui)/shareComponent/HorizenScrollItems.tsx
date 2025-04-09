@@ -10,7 +10,7 @@ function useParallax(value: MotionValue<number>, distance: string) {
 function Card({ title, description, id, subtitleOne, subtitleTwo, xPosition }: { title: string; description: string; id: number; subtitleOne: string; subtitleTwo: string; xPosition: MotionValue<string> }) {
   return (
     <motion.li style={{ x: xPosition }} className="flex w-full items-center justify-center flex-col">
-      <div className="w-[1200px] h-[280px] flex flex-col items-center justify-center md:h-[400px] 2xl:h-[360px] 2xl:w-[1600px]">
+      <div className="w-[1080px] h-[280px] flex flex-col items-center justify-center md:h-[200px] 2xl:h-[360px] 2xl:w-[1600px]">
         <div className="text-lg font-semibold md:text-2xl md:mb-2 2xl:text-2xl">{title}</div>
         <div className="text-base mb-8 2xl:text-xl">{subtitleOne}</div>
         <div className="text-base mx-64 w-48 text-center md:w-fit 2xl:text-xl">{description}</div>
