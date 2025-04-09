@@ -8,8 +8,8 @@ export const AboutMe = () => {
 
   return (
     <>
-      <div className="pt-8 grid gap-12 grid-cols-1 md:gap-20  md:mt-12 lg:36 md:grid-cols-2">
-        <motion.div className="flex order-last justify-center items-center md:order-1" initial={{ translateY: 10, opacity: 0, scale: 0.99 }} animate={{ translateY: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.3, ease: [0, 0.1, 0.7, 1.01] }}>
+      <div className="pt-8 grid gap-12 grid-cols-1 md:gap-20  md:mt-12 md:grid-cols-2 2xl:mt-64">
+        <motion.div className="flex order-last justify-center items-center md:order-1 text-center md:text-left" initial={{ translateY: 10, opacity: 0, scale: 0.99 }} animate={{ translateY: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.3, ease: [0, 0.1, 0.7, 1.01] }}>
           {aboutMe.description?.split("\n").map((line: string, index: number) => {
             return (
               <Fragment key={index}>
@@ -22,8 +22,8 @@ export const AboutMe = () => {
             );
           })}
         </motion.div>
-        <motion.div initial={{ translateY: 10, opacity: 0, scale: 0.99 }} animate={{ translateY: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="h-64 md:order-last overflow-hidden border">
-          <motion.img src={aboutMe.img} width={1920} height={1080} alt="test image" className="h-64 object-cover"></motion.img>
+        <motion.div initial={{ translateY: 10, opacity: 0, scale: 0.99 }} animate={{ translateY: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="h-64 md:order-last overflow-hidden 2xl:h-96">
+          <motion.img src={aboutMe.img} width={1920} height={1080} alt="test image" className="h-64 object-cover 2xl:h-96"></motion.img>
         </motion.div>
       </div>
     </>

@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <>
       {projectDatas.length !== 0 ? (
-        <div className="flex flex-col gap-36 md:gap-48 xl:gap-80">
+        <div className="flex flex-col gap-36 md:gap-48 xl:gap-80 2xl:gap-96">
           <ProjectIntro projectData={projectData} />
           <ProjectThreePictures projectData={projectData} title="- Brainstorming" />
           <ProjectOnePicture projectData={projectData} title={"- Making"} />

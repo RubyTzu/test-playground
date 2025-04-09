@@ -15,7 +15,7 @@ export const Skills = () => {
     <div>
       <div className="flex flex-col justify-between pb-8 md:items-start md:pb-0 md:flex-row">
         <SectionTitle>Skills</SectionTitle>
-        <div className="flex justify-between md:items-center md:pt-[5.5rem]">
+        <div className="flex justify-between md:items-center md:pt-[5.5rem] 2xl:pt-[4rem]">
           {skillsSum.map((skillSum: SkillsSumType) => {
             return (
               <div
@@ -32,7 +32,7 @@ export const Skills = () => {
           })}
         </div>
       </div>
-      <div className="grid gap-4 grid-cols-2 md:grid-cols-6">
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-6 2xl:mt-20">
         {skills.map((skill: any) => {
           return <Skill key={skill.id} id={skill.id} title={skill.title} lineWidth={skill.level} />;
         })}
@@ -80,7 +80,7 @@ const Skill = ({ id, title, lineWidth }: { id: string; title: string; lineWidth:
         delay: Number(id) * 0.01,
         ease: [0.74, 0, 0.19, 1.02],
       }}>
-      <div className="text-sm">{title}</div>
+      <div className="text-sm 2xl:text-base">{title}</div>
       <div className="w-full border border-primary-200 h-3 rounded-full">
         <motion.div
           ref={lineRef}

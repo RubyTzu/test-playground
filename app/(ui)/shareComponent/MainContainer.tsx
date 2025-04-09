@@ -6,7 +6,7 @@ export const MainContainer = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <motion.main key={pathname} className="relative w-screen px-10 mx-auto flex flex-col row-start-2 justify-center items-center md:max-w-[1240px] md:px-20" initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ ease: "easeInOut", duration: 0.3 }}>
+    <motion.main key={pathname} className="relative w-screen px-10 mx-auto flex flex-col row-start-2 justify-center items-center md:max-w-[1240px] md:px-20 2xl:max-w-[1580px]" initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ ease: "easeInOut", duration: 0.3 }}>
       {children}
     </motion.main>
   );

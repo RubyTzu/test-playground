@@ -35,7 +35,7 @@ const NavDesktop = ({ socialMedia, routes }: { socialMedia: SocialMedia[] | null
   const pathname = usePathname();
 
   return (
-    <div className="mx-auto max-w-[1200px] hidden justify-between items-center md:flex">
+    <div className="mx-auto max-w-[1200px] hidden justify-between items-center md:flex 2xl:max-w-[1580px]">
       <div className="w-fit flex gap-5 h-fit">
         {routes?.map((site: Route) => (
           <Link className="relative" key={site.title} href={site.href}>

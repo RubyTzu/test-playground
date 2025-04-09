@@ -79,7 +79,7 @@ export default async function RootLayout({
         <meta property="og:image:alt" content="My custom alt" />
         <meta property="og:type" content="website" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutrals-0 text-neutrals-300 selection:text-primary-500 selection:bg-primary-200`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutrals-0 text-neutrals-300 selection:text-primary-500 selection:bg-primary-200 2xl:text-lg`}>
         <Providers>
           <div className="grid grid-rows-[8rem_1fr_6rem] min-h-screen font-[family-name:var(--font-geist-sans)]">
             <Navbar />

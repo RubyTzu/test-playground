@@ -44,7 +44,7 @@
     "about": {
         "aboutMe": {
             "description": "Hi! I am Ruby Yi Tzu Chen, you can call me Ruby :)\n\nMy passion for design and development has led me through roles such as interaction designer, visual marketing designer, front-end developer, and currently, website operations specialist. I’m curious, always eager to learn, and excited about the future and my continued growth.",
-            "img": "/images/TEST_JPG.jpg"
+            "img": "/images/about/aboutMe.jpg"
         },
         "skillsSum": [
             {

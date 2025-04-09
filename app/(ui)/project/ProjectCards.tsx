@@ -10,7 +10,7 @@ export const ProjectCards = () => {
   const projectDatas = [...projects].reverse();
 
   return (
-    <div className="pt-4 grid gap-36 grid-cols-1  md:mt-12 lg:36 md:gap-48 xl:gap-64">
+    <div className="pt-4 grid gap-36 grid-cols-1  md:mt-12 lg:36 md:gap-48 xl:gap-64 2xl:mt-32 2xl:gap-64">
       {projectDatas.map((projectData) => {
         return <ProjectCard projectData={projectData} key={projectData.id} />;
       })}

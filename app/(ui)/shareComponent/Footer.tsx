@@ -22,7 +22,7 @@ export const Footer = () => {
 
 const FooterDesktop = ({ email, year, scrollToTop }: { email: string | undefined; year: number; scrollToTop: () => void }) => {
   return (
-    <div className="hidden items-center justify-between mx-auto max-w-[1200px] text-zinc-600 md:flex">
+    <div className="hidden items-center justify-between mx-auto max-w-[1200px] text-zinc-600 md:flex 2xl:max-w-[1580px]">
       <div>{year} ©</div>
       <div>
         Build by&nbsp;
