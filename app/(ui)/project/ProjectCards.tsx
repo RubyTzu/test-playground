@@ -10,7 +10,7 @@ export const ProjectCards = () => {
   const projectDatas = [...projects].reverse();
 
   return (
-    <div className="pt-4 grid gap-36 grid-cols-1 md:pt-16 xl:mt-32 md:gap-48 xl:gap-64">
+    <div className="pt-4 grid gap-36 grid-cols-1  md:mt-12 lg:36 md:gap-48 xl:gap-64">
       {projectDatas.map((projectData) => {
         return <ProjectCard projectData={projectData} key={projectData.id} />;
       })}
@@ -28,7 +28,7 @@ const ProjectCard = ({ projectData }: { projectData: Project }) => {
   };
 
   return (
-    <div id={String(projectData.id)} ref={ref} className="grid gap-10 grid-cols-1 scroll-mt-32 md:grid-cols-6 md:scroll-mt-64">
+    <div id={String(projectData.id)} ref={ref} className="grid gap-10 grid-cols-1 scroll-mt-32 md:grid-cols-6 md:scroll-mt-36">
       <motion.div onClick={handleClick} initial={{ translateY: -10, opacity: 0, scale: 0.99 }} animate={{ translateY: isInView ? 0 : -10, opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.99 }} transition={{ duration: 0.5, ease: [0, 0.1, 0.7, 1.01] }} className="col-span-3 overflow-hidden border cursor-pointer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <motion.img
           whileHover={{
