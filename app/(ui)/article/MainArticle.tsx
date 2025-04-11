@@ -21,7 +21,7 @@ export const MainArticle = ({ articleData }: { articleData: Article }) => {
         <div className="text-sm font-light leading-8">{formattedDate}</div>
       </div>
       <div className="flex w-full justify-end md:flex-col md:col-span-1">
-        <Link href="/" className="border-l-primary-400 border-0 border-l-2 text-center pl-2 w-16">
+        <Link target="_blank" href={articleData.cta} className="border-l-primary-400 border-0 border-l-2 text-center pl-2 w-16">
           Read
         </Link>
       </div>

@@ -540,67 +540,66 @@
     "article": [
         {
             "id": 1,
-            "title": "Article 1",
-            "description": "Description about this article to make it look good. Description about this article to make it look good.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": true
+            "title": "My Year in Web Project Management",
+            "description": "Reflecting on my year in web project management.",
+            "img": "/images/article/article_WebManagement.png",
+            "date": "2025-04-11T12:00:00.000Z",
+            "isMain": true,
+            "cta": "/"
         },
         {
             "id": 2,
-            "title": "Article 2",
-            "description": "Description about this article to make it look good 2. Description about this article to make it look good 2.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": true
+            "title": "The Making of Chill Split APP",
+            "description": "This article provides an overview of how this project came to life.",
+            "img": "/images/article/article_ChillSplit.jpg",
+            "date": "2025-04-11T12:00:00.000Z",
+            "isMain": true,
+            "cta": "/"
         },
         {
             "id": 3,
-            "title": "Article 3",
-            "description": "Description about this article to make it look good 3. Description about this article to make it look good 3.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": true
+            "title": "Output to Win Book Review",
+            "description": "The reason I picked up Output to Win was because I wanted to update my portfolio.",
+            "img": "/images/article/article_OutputToWin.jpg",
+            "date": "2025-04-10T12:00:00.000Z",
+            "isMain": false,
+            "cta": "https://medium.com/@rrubyitzuchen/output-to-win-book-review-e8a03043e0fd"
         },
         {
             "id": 4,
-            "title": "Article 4",
-            "description": "Description about this article to make it look good 4. Description about this article to make it look good 4.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": false
+            "title": "The 15 Invaluable Laws of Growth Book Review",
+            "description": "It primarily conveys the author’s perspective, and whether it’s useful depends on the reader.",
+            "img": "/images/article/article_15Laws.jpg",
+            "date": "2025-04-10T12:00:00.000Z",
+            "isMain": false,
+            "cta": "/"
         },
         {
             "id": 5,
-            "title": "Article 5",
-            "description": "Description about this article to make it look good 5. Description about this article to make it look good 5.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": false
+            "title": "The first journey after my career change",
+            "description": "This is a reflection on my very first role as a frontend developer.",
+            "img": "/images/article/article_firstJobChanging.jpeg",
+            "date": "2024-03-04T12:00:00.000Z",
+            "isMain": true,
+            "cta": "https://medium.com/@rrubyitzuchen/%E4%B8%AD%E6%96%87%E7%89%88%E9%BB%9E%E6%AD%A4-3996140cca8b"
         },
         {
             "id": 6,
-            "title": "Article 6",
-            "description": "Description about this article to make it look good 6. Description about this article to make it look good 6.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": false
+            "title": "Mock Interview Experience",
+            "description": "This article shares my experience from a mock interview.",
+            "img": "/images/article/article_MockInterviewExperience.jpg",
+            "date": "2024-01-06T12:00:00.000Z",
+            "isMain": false,
+            "cta": "https://medium.com/@rrubyitzuchen/mock-interview-experience-e14b8a49f19f"
         },
         {
             "id": 7,
-            "title": "Article 7",
-            "description": "Description about this article to make it look good 7. Description about this article to make it look good 7.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": false
-        },
-        {
-            "id": 8,
-            "title": "Article 8",
-            "description": "Description about this article to make it look good 8. Description about this article to make it look good 8.",
-            "img": "/images/TEST_JPG.jpg",
-            "date": "2024-12-09T12:00:00.000Z",
-            "isMain": false
+            "title": "About my Career Changing",
+            "description": "This blog is a collection of my thoughts and reflections on my journey to a career change.",
+            "img": "/images/article/article_AboutMyCareerChanging.jpg",
+            "date": "2023-10-26T12:00:00.000Z",
+            "isMain": false,
+            "cta": "https://medium.com/@rrubyitzuchen/about-my-career-changing-1-8e2fc3ba069e"
         }
     ]
 }

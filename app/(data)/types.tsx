@@ -96,4 +96,5 @@ export interface Article {
   img: string;
   date: string;
   isMain: boolean;
+  cta: string;
 }
