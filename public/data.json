@@ -543,7 +543,7 @@
             "title": "My Year in Web Project Management",
             "description": "Reflecting on my year in web project management.",
             "img": "/images/article/article_WebManagement.png",
-            "date": "2025-04-11T12:00:00.000Z",
+            "date": "2025-04-13T12:00:00.000Z",
             "isMain": true,
             "cta": "/"
         },
@@ -552,16 +552,16 @@
             "title": "The Making of Chill Split APP",
             "description": "This article provides an overview of how this project came to life.",
             "img": "/images/article/article_ChillSplit.jpg",
-            "date": "2025-04-11T12:00:00.000Z",
+            "date": "2025-04-13T12:00:00.000Z",
             "isMain": true,
-            "cta": "/"
+            "cta": "https://medium.com/@rrubyitzuchen/the-making-of-chill-split-app-65146931d5b6"
         },
         {
             "id": 3,
             "title": "Output to Win Book Review",
             "description": "The reason I picked up Output to Win was because I wanted to update my portfolio.",
             "img": "/images/article/article_OutputToWin.jpg",
-            "date": "2025-04-10T12:00:00.000Z",
+            "date": "2025-04-11T12:00:00.000Z",
             "isMain": false,
             "cta": "https://medium.com/@rrubyitzuchen/output-to-win-book-review-e8a03043e0fd"
         },
@@ -570,9 +570,9 @@
             "title": "The 15 Invaluable Laws of Growth Book Review",
             "description": "It primarily conveys the author’s perspective, and whether it’s useful depends on the reader.",
             "img": "/images/article/article_15Laws.jpg",
-            "date": "2025-04-10T12:00:00.000Z",
+            "date": "2025-04-11T12:00:00.000Z",
             "isMain": false,
-            "cta": "/"
+            "cta": "https://medium.com/@rrubyitzuchen/the-15-invaluable-laws-of-growth-book-review-c35849b7ec8f"
         },
         {
             "id": 5,
