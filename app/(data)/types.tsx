@@ -61,8 +61,8 @@ export interface ProjectDetails extends Project {
   makingDescription: string;
   outComeDescription: string;
   brainStormingImg: string[];
-  makingImg: string;
-  outComeImg: string;
+  makingImg: string[];
+  outComeImg: string[];
   videoImg: string;
   videoUrl: string;
   demoUrl: string;

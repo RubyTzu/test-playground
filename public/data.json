@@ -244,8 +244,12 @@
                 "/images/TEST_JPG.jpg",
                 "/images/TEST_JPG.jpg"
             ],
-            "makingImg": "/images/TEST_JPG.jpg",
-            "outComeImg": "/images/TEST_JPG.jpg",
+            "makingImg": [
+                "/images/TEST_JPG.jpg"
+            ],
+            "outComeImg": [
+                "/images/TEST_JPG.jpg"
+            ],
             "videoImg": "/images/TEST_YOUTUBE.jpg",
             "videoUrl": "https://player.vimeo.com/video/659837276?h=d12bd533ea",
             "demoUrl": "",
@@ -318,8 +322,8 @@
                 "/images/TEST2_JPG.jpg",
                 "/images/TEST2_JPG.jpg"
             ],
-            "makingImg": "/images/TEST2_JPG.jpg",
-            "outComeImg": "/images/TEST2_JPG.jpg",
+            "makingImg": ["/images/TEST2_JPG.jpg"],
+            "outComeImg": ["/images/TEST2_JPG.jpg"],
             "videoImg": "/images/TEST5_YOUTUBE.jpg",
             "videoUrl": "https://player.vimeo.com/video/885056832?h=d6922c812b",
             "demoUrl": "",
@@ -382,8 +386,8 @@
                 "/images/TEST3_JPG.jpg",
                 "/images/TEST3_JPG.jpg"
             ],
-            "makingImg": "/images/TEST3_JPG.jpg",
-            "outComeImg": "/images/TEST3_JPG.jpg",
+            "makingImg": ["/images/TEST3_JPG.jpg"],
+            "outComeImg": ["/images/TEST3_JPG.jpg"],
             "videoImg": "/images/TEST3_YOUTUBE.jpg",
             "videoUrl": "https://player.vimeo.com/video/917820233?h=e7e3f3eaf3",
             "demoUrl": "",
@@ -440,13 +444,9 @@
             "brainStormingDescription": "I wanted to create a simple table, but the list was too long to fit in a single scroll on the screen. So, I came up with the idea of creating a categorized table.",
             "makingDescription": "To create the table, I carefully organized the list of store locations and ensured that the Google Map links were in the same format. This is a simple table website built using tools like Tailwind CSS, Next.js, Vercel, and Git.",
             "outComeDescription": "The final table is categorized by the navbar at the top, which includes \"North\", \"Central\", \"South\", and \"All Region\". You can click on the desired region you wish to explore, and the table will change accordingly.",
-            "brainStormingImg": [
-                "/images/TEST4_JPG.jpg",
-                "/images/TEST4_JPG.jpg",
-                "/images/TEST4_JPG.jpg"
-            ],
-            "makingImg": "/images/TEST4_JPG.jpg",
-            "outComeImg": "/images/TEST4_JPG.jpg",
+            "brainStormingImg": ["/images/projects/StoreLocation/StoreLocation_Main_org.jpg"],
+            "makingImg": ["/images/projects/StoreLocation/StoreLocation_Main_org.jpg"],
+            "outComeImg": [],
             "videoImg": "/images/projects/StoreLocation/StoreLocation_Main.jpg",
             "videoUrl": "https://player.vimeo.com/video/1071005605?h=894ac9e19b",
             "demoUrl": "https://table-store-iota.vercel.app/",
@@ -484,13 +484,13 @@
             "makingDescription": "As the front-end developer on the team, I play a crucial role as a bridge between the other two members. Whether it's discussing slight animations for the user interface or how the APIs should be handed off, we spend a significant amount of time ensuring everything works as smoothly and precisely as it should.\n\nI completed it using the Next.js framework, CSS tools like Tailwind CSS, and animation tools like Motion (formerly known as Framer Motion). I also used Git for team collaboration and integrated APIs by simulating with json-server and connecting to actual APIs with the help of tools like Apidog. The calculator was created thanks to Stack Overflow users who helped me solve countless problems.",
             "outComeDescription": "The result of \"Chill Split\" may not be perfect, but it's a great kickstart for my career transition. I collaborated with an excellent UI/UX designer and a dedicated backend developer. We made the app capable of splitting costs in TWD, categorizing expenses, grouping by date, adding notes, adding members, allowing different amounts for the same expense, and editing all the features mentioned above, among others.",
             "brainStormingImg": [
-                "/images/TEST5_JPG.jpg",
-                "/images/TEST5_JPG.jpg",
-                "/images/TEST5_JPG.jpg"
+                "/images/article/article_ChillSplit.jpg",
+                "/images/article/article_ChillSplit.jpg",
+                "/images/article/article_ChillSplit.jpg"
             ],
-            "makingImg": "/images/TEST5_JPG.jpg",
-            "outComeImg": "/images/TEST5_JPG.jpg",
-            "videoImg": "/images/TEST5_YOUTUBE.jpg",
+            "makingImg": ["/images/article/article_ChillSplit.jpg"],
+            "outComeImg": ["/images/article/article_ChillSplit.jpg"],
+            "videoImg": "/images/TEST3_YOUTUBE.jpg",
             "videoUrl": "https://www.youtube.com/watch?v=vEhD5WwCo44",
             "demoUrl": "https://cost-sharing-app-git-staging-samchlius-projects.vercel.app/",
             "time": "2024",
@@ -521,8 +521,8 @@
             "cta": [
                 {
                     "id": "1",
-                    "title": "View on Notion",
-                    "url": "/"
+                    "title": "The Making of Chill Split",
+                    "url": "https://medium.com/@rrubyitzuchen/the-making-of-chill-split-app-65146931d5b6"
                 }
             ],
             "hashtag": [
@@ -543,7 +543,7 @@
             "title": "My Year in Web Project Management",
             "description": "Reflecting on my year in web project management.",
             "img": "/images/article/article_WebManagement.png",
-            "date": "2025-04-13T12:00:00.000Z",
+            "date": "2025-04-14T12:00:00.000Z",
             "isMain": true,
             "cta": "https://medium.com/@rrubyitzuchen/my-year-in-web-project-management-ce924caf51b1"
         },

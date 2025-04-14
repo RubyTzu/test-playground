@@ -1,8 +1,6 @@
 "use client";
 import { useParams } from "next/navigation";
 import { ProjectIntro } from "@/app/(ui)/project/singleProject/ProjectIntro";
-import { ProjectThreePictures } from "@/app/(ui)/project/singleProject/ProjecThreePicture";
-import { ProjectOnePicture } from "@/app/(ui)/project/singleProject/ProjectOnePicture";
 import { ProjectPictures } from "@/app/(ui)/project/singleProject/ProjectPictures";
 import { ProjectDetails } from "@/app/(data)/types";
 import { ProjectOneVideo } from "@/app/(ui)/project/singleProject/ProjectOneVideo";
@@ -19,12 +17,10 @@ export default function Page() {
       {projectDatas.length !== 0 ? (
         <div className="flex flex-col gap-36 md:gap-48 xl:gap-80 2xl:gap-96">
           <ProjectIntro projectData={projectData} />
-          <ProjectThreePictures projectData={projectData} title="- Brainstorming" />
-          <ProjectPictures />
-          <ProjectOnePicture projectData={projectData} title={"- Making"} />
+          <ProjectPictures projectData={projectData} title={"- Brainstorming"} />
+          <ProjectPictures projectData={projectData} title={"- Making"} />
           <ProjectOneVideo projectData={projectData} title={"- Outcome"} />
           <ProjectStaffDetail projectData={projectData} title={"-"} />
-
         </div>
       ) : null}
     </>
