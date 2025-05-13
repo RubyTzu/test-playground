@@ -78,7 +78,7 @@ export const EmblaCarousel: React.FC<PropType> = (props) => {
 
           <div className="flex flex-wrap justify-end items-center mr-[-0.6rem]">
             {scrollSnaps.map((_, index) => (
-              <DotButton key={index} onClick={() => onDotButtonClick(index)} className={"appearance-none bg-transparent touch-manipulation cursor-pointer border-0 p-0 m-0 w-[2rem] h-[2rem] flex items-center justify-center rounded-full relative after:content-[''] after:flex after:items-center after:rounded-full after:w-[1rem] after:h-[1rem] after:border after:border-primary-300 ".concat(index === selectedIndex ? "after:shadow-sm after:border-2 after:bg-primary-300 after:outline after:outline-primary-500" : "")} />
+              <DotButton key={index} onClick={() => onDotButtonClick(index)} className={"appearance-none bg-transparent touch-manipulation cursor-pointer border-0 p-0 mx-1 w-[1rem] h-[1rem] flex items-center justify-center rounded-full relative after:content-[''] after:flex after:items-center after:rounded-full after:w-[1rem] after:h-[1rem] after:border after:border-primary-300 ".concat(index === selectedIndex ? "after:shadow-sm after:border-2 after:bg-primary-300" : "")} />
             ))}
           </div>
         </div>
