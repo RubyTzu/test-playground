@@ -66,7 +66,7 @@ export const HorizenScrollItems = ({ items }: { items: Item[] }) => {
             <div style={{ zIndex: "11" }} className="fixed bottom-[120px] left-16 right-16 md:left-96 md:right-96 2xl:left-[30%] 2xl:right-[30%]  bg-primary-300 h-[5px] md:bottom-[80px] 2xl:bottom-[160px]"></div>
           </>
         )}
-        <ul className="z-10 flex sticky top-36 overflow-hidden 2xl:top-64">
+        <ul className="z-10 flex sticky top-[40%] -translate-y-[40%] overflow-hidden">
           {items.map((item) => (
             <Card title={item.title} description={item.description} id={item.id} subtitleOne={item.subtitleOne} subtitleTwo={item.subtitleTwo} xPosition={xPosition} key={item.id} />
           ))}
