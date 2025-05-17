@@ -82,7 +82,7 @@ export default async function RootLayout({
         <meta property="og:url" content={siteUrl} />
         <meta property="og:site_name" content="Ruby Yi Tzu Chen" />
         <meta property="og:locale" content="zh_TW" />
-        <meta property="og:image:url" content="/images/openGraph/1200x630.png" />
+        <meta property="og:image" content={`${siteUrl}/images/openGraph/1200x630.png`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="My custom alt" />
