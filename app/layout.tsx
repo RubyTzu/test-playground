@@ -77,7 +77,13 @@ export default async function RootLayout({
             />
           </>
         )}
+        <meta property="og:title" content="Ruby Yi Tzu Chen" />
+        <meta property="og:description" content="An explorer passionate about learning new skills." />
         <meta property="og:image" content={`${siteUrl}/images/openGraph/1200x630.png`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:site_name" content="Ruby Yi Tzu Chen" />
+        <meta property="og:locale" content="zh_TW" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutrals-0 text-neutrals-300 selection:text-primary-500 selection:bg-primary-200 2xl:text-lg`}>
         <Providers>
