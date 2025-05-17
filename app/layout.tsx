@@ -7,6 +7,8 @@ import { BackToTopButton } from "./(ui)/shareComponent/BackToTopBtn";
 import { MainContainer } from "./(ui)/shareComponent/MainContainer";
 import { Providers } from "./(data)/Provider";
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -21,7 +23,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Ruby Yi Tzu Chen",
   description: "An explorer passionate about learning new skills.",
-  metadataBase: new URL("https://www.rrubyitzuchen.com/"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000"),
   alternates: {
     canonical: "/",
     languages: {
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ruby Yi Tzu Chen",
     description: "An explorer passionate about learning new skills.",
-    url: "https://www.rrubyitzuchen.com/",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
     siteName: "Ruby Yi Tzu Chen",
     images: [
       {
@@ -70,7 +72,7 @@ export default async function RootLayout({
       <head>
         <meta property="og:title" content="Ruby Yi Tzu Chen" />
         <meta property="og:description" content="An explorer passionate about learning new skills." />
-        <meta property="og:url" content="https://www.rrubyitzuchen.com/" />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_SITE_URL}`} />
         <meta property="og:site_name" content="Ruby Yi Tzu Chen" />
         <meta property="og:locale" content="zh_TW" />
         <meta property="og:image:url" content="/images/openGraph/1200x630.png" />
@@ -78,6 +80,21 @@ export default async function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="My custom alt" />
         <meta property="og:type" content="website" />
+        {GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutrals-0 text-neutrals-300 selection:text-primary-500 selection:bg-primary-200 2xl:text-lg`}>
         <Providers>
