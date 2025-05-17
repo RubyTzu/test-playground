@@ -7,38 +7,66 @@ import { BackToTopButton } from "./(ui)/shareComponent/BackToTopBtn";
 import { MainContainer } from "./(ui)/shareComponent/MainContainer";
 import { Providers } from "./(data)/Provider";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000";
+// export async function generateMetadata(): Promise<Metadata> {
 
-  return {
+//   return {
+//     title: "Ruby Yi Tzu Chen",
+//     description: "An explorer passionate about learning new skills.",
+//     metadataBase: new URL("https://www.rrubyitzuchen.com"),
+//     alternates: {
+//       canonical: "/",
+//       languages: {
+//         "en-US": "/en-US",
+//         "zh-TW": "/zh-TW",
+//       },
+//     },
+//     openGraph: {
+//       title: "Ruby Yi Tzu Chen",
+//       description: "An explorer passionate about learning new skills.",
+//       url: "https://www.rrubyitzuchen.com",
+//       siteName: "Ruby Yi Tzu Chen",
+//       images: [
+//         {
+//           url: "https://www.rrubyitzuchen.com/images/openGraph/1200x630.png",
+//           width: 1200,
+//           height: 630,
+//           alt: "Large preview",
+//         },
+//       ],
+//       locale: "zh_TW",
+//       type: "website",
+//     },
+//   };
+// }
+
+export const metadata: Metadata = {
+  title: "Ruby Yi Tzu Chen",
+  description: "An explorer passionate about learning new skills.",
+  metadataBase: new URL("https://www.rrubyitzuchen.com/"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+      "zh-TW": "/zh-TW",
+    },
+  },
+  openGraph: {
     title: "Ruby Yi Tzu Chen",
     description: "An explorer passionate about learning new skills.",
-    metadataBase: new URL(siteUrl),
-    alternates: {
-      canonical: "/",
-      languages: {
-        "en-US": "/en-US",
-        "zh-TW": "/zh-TW",
+    url: "https://www.rrubyitzuchen.com",
+    siteName: "Ruby Yi Tzu Chen",
+    images: [
+      {
+        url: "https://www.rrubyitzuchen.com/images/openGraph/1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "Large preview",
       },
-    },
-    openGraph: {
-      title: "Ruby Yi Tzu Chen",
-      description: "An explorer passionate about learning new skills.",
-      url: siteUrl,
-      siteName: "Ruby Yi Tzu Chen",
-      images: [
-        {
-          url: `${siteUrl}/images/openGraph/1200x630.png`,
-          width: 1200,
-          height: 630,
-          alt: "Large preview",
-        }
-      ],
-      locale: "zh_TW",
-      type: "website",
-    },
-  };
-}
+    ],
+    locale: "zh_TW",
+    type: "website",
+  },
+};
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
