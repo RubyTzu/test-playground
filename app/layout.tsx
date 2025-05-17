@@ -32,19 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
           width: 1200,
           height: 630,
           alt: "Large preview",
-        },
-        {
-          url: `${siteUrl}/images/openGraph/600x315.png`,
-          width: 600,
-          height: 315,
-          alt: "600x315.png",
-        },
-        {
-          url: `${siteUrl}/images/openGraph/200x200.png`,
-          width: 200,
-          height: 200,
-          alt: "200x200.png",
-        },
+        }
       ],
       locale: "zh_TW",
       type: "website",
@@ -69,7 +57,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000";
 
   return (
     <html lang="en">
@@ -91,13 +78,14 @@ export default async function RootLayout({
         )}
         <meta property="og:title" content="Ruby Yi Tzu Chen" />
         <meta property="og:description" content="An explorer passionate about learning new skills." />
-        <meta property="og:url" content={siteUrl} />
+        <meta property="og:url" content="https://www.rrubyitzuchen.com" />
         <meta property="og:site_name" content="Ruby Yi Tzu Chen" />
         <meta property="og:locale" content="zh_TW" />
-        <meta property="og:image" content={`${siteUrl}/images/openGraph/1200x630.png`} />
+        <meta property="og:image:url" content="/images/openGraph/1200x630.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="My custom alt" />
+        <meta property="og:type" content="website" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutrals-0 text-neutrals-300 selection:text-primary-500 selection:bg-primary-200 2xl:text-lg`}>
         <Providers>
