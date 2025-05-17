@@ -21,7 +21,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Ruby Yi Tzu Chen",
   description: "An explorer passionate about learning new skills.",
-  metadataBase: new URL("https://rrubyitzuchen.vercel.app"),
+  metadataBase: new URL("https://www.rrubyitzuchen.com/"),
   alternates: {
     canonical: "/",
     languages: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ruby Yi Tzu Chen",
     description: "An explorer passionate about learning new skills.",
-    url: "https://rrubyitzuchen.vercel.app",
+    url: "https://www.rrubyitzuchen.com/",
     siteName: "Ruby Yi Tzu Chen",
     images: [
       {
@@ -70,7 +70,7 @@ export default async function RootLayout({
       <head>
         <meta property="og:title" content="Ruby Yi Tzu Chen" />
         <meta property="og:description" content="An explorer passionate about learning new skills." />
-        <meta property="og:url" content="https://rrubyitzuchen.vercel.app" />
+        <meta property="og:url" content="https://www.rrubyitzuchen.com/" />
         <meta property="og:site_name" content="Ruby Yi Tzu Chen" />
         <meta property="og:locale" content="zh_TW" />
         <meta property="og:image:url" content="/images/openGraph/1200x630.png" />
