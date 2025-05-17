@@ -32,7 +32,19 @@ export async function generateMetadata(): Promise<Metadata> {
           width: 1200,
           height: 630,
           alt: "Large preview",
-        }
+        },
+        {
+          url: `${siteUrl}/images/openGraph/600x315.png`,
+          width: 600,
+          height: 315,
+          alt: "600x315.png",
+        },
+        {
+          url: `${siteUrl}/images/openGraph/200x200.png`,
+          width: 200,
+          height: 200,
+          alt: "200x200.png",
+        },
       ],
       locale: "zh_TW",
       type: "website",
