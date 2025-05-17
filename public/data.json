@@ -2,8 +2,8 @@
     "intro": {
         "name": "Ruby Chen",
         "intro": "An explorer passionate about learning new skills, with a strong focus on communication, collaboration, and organization.",
-        "img": "/images/TEST_JPG.jpg",
-        "resumeUrl": "https://docs.google.com/document/d/1buL7aPkKzV5NjToUbiovmGgHCseG1PdlvW7JLPk35GA/edit?usp=sharing",
+        "img": "/images/about/aboutMe.jpg",
+        "resumeUrl": "https://docs.google.com/document/d/1_AVM6w-q0mehTp1uYtgYgeNyHb2aRvxdPGiw002RLM0/edit?usp=sharing",
         "socialMedia": [
             {
                 "title": "BH",
@@ -234,7 +234,7 @@
             "description": "An immersive exhibition exploring the human-coral relationship.",
             "img": "/images/projects/Ocean/00_cover.jpg",
             "gif": "/images/projects/Ocean/00_cover.gif",
-            "longImg": "/images/projects/Ocean/00_cover.jpg",
+            "longImg": "/images/projects/Ocean/00_long_cover.jpg",
             "longDescription": "This is one of my previous designer works, my role includes designing display panels, interactive game UI, and assisting in game planning, animation design, exhibition shooting, and video editing.",
             "brainStormingDescription": "We started by creating the poster, followed by the main visual for the entire exhibition. We learned that the project would focus on the relationship between coral and humans, so sea colors were naturally incorporated.",
             "makingDescription": "We were fascinated by the story of corals and people, which inspired us to design an immersive, interactive, ocean-themed exhibit. I used these tools to complete this amazing exhibition design journey: Adobe Illustrator, Photoshop, Premiere Pro, After Effects, and Unity2D.\n\nThrough team collaboration, we produced all the interactive elements in just six months. The process began with designing on the computer, and after extensive discussions with the client, we moved to the exhibit site to continue our work. Transforming the exhibit from raw materials to a lively interactive project was truly a magnificent experience.",
@@ -324,8 +324,8 @@
             "title": "Simple Twitter",
             "description": "As the name suggests, it's an easier version of Twitter.",
             "img": "/images/projects/SimpleTwitter/01.jpg",
-            "gif": "/images/projects/SimpleTwitter/00_cover_2.gif",
-            "longImg": "/images/projects/SimpleTwitter/01_long.jpg",
+            "gif": "/images/projects/SimpleTwitter/00_cover.gif",
+            "longImg": "/images/projects/SimpleTwitter/00_long_cover.jpg",
             "longDescription": "This project is the final project of Alpha Camp online web development boot camp. It helped me gain a comprehensive understanding of web development.",
             "brainStormingDescription": "This is the first project I started as a front-end developer. I learned by going through persona research, following the roadmap to becoming a front-end developer, and using an efficient to-do list with my teammates, which consisted of two front-end developers and two back-end developers in total.",
             "makingDescription": "It took us a whole month to create this lightweight website. I gained experience in project management and used the following tools: ReactJS, Bootstrap CSS, CSS Modules, Git, and API integration.\n\nWe divided the work into creating separate components and researching API connections. Thanks to the collaboration of my front-end teammate, we successfully completed the project ahead of schedule.",
