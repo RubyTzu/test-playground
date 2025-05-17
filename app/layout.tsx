@@ -18,38 +18,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// export async function generateMetadata(): Promise<Metadata> {
-
-//   return {
-//     title: "Ruby Yi Tzu Chen",
-//     description: "An explorer passionate about learning new skills.",
-//     metadataBase: new URL("https://www.rrubyitzuchen.com"),
-//     alternates: {
-//       canonical: "/",
-//       languages: {
-//         "en-US": "/en-US",
-//         "zh-TW": "/zh-TW",
-//       },
-//     },
-//     openGraph: {
-//       title: "Ruby Yi Tzu Chen",
-//       description: "An explorer passionate about learning new skills.",
-//       url: "https://www.rrubyitzuchen.com",
-//       siteName: "Ruby Yi Tzu Chen",
-//       images: [
-//         {
-//           url: "https://www.rrubyitzuchen.com/images/openGraph/1200x630.png",
-//           width: 1200,
-//           height: 630,
-//           alt: "Large preview",
-//         },
-//       ],
-//       locale: "zh_TW",
-//       type: "website",
-//     },
-//   };
-// }
-
 export const metadata: Metadata = {
   title: "Ruby Yi Tzu Chen",
   description: "An explorer passionate about learning new skills.",
@@ -117,11 +85,11 @@ export default async function RootLayout({
             <script
               dangerouslySetInnerHTML={{
                 __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}');
-                `,
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GA_ID}');
+                  `,
               }}
             />
           </>
