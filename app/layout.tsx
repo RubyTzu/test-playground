@@ -7,10 +7,9 @@ import { BackToTopButton } from "./(ui)/shareComponent/BackToTopBtn";
 import { MainContainer } from "./(ui)/shareComponent/MainContainer";
 import { Providers } from "./(data)/Provider";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000";
-
 export async function generateMetadata(): Promise<Metadata> {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000";
+
   return {
     title: "Ruby Yi Tzu Chen",
     description: "An explorer passionate about learning new skills.",
@@ -33,19 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
           width: 1200,
           height: 630,
           alt: "Large preview",
-        },
-        {
-          url: `${siteUrl}/images/openGraph/600x315.png`,
-          width: 600,
-          height: 315,
-          alt: "Medium preview",
-        },
-        {
-          url: `${siteUrl}/images/openGraph/200x200.png`,
-          width: 200,
-          height: 200,
-          alt: "Small preview",
-        },
+        }
       ],
       locale: "zh_TW",
       type: "website",
@@ -69,6 +56,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000";
+
   return (
     <html lang="en">
       <head>
@@ -87,6 +77,7 @@ export default async function RootLayout({
             />
           </>
         )}
+        <meta property="og:image" content={`${siteUrl}/images/openGraph/1200x630.png`} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutrals-0 text-neutrals-300 selection:text-primary-500 selection:bg-primary-200 2xl:text-lg`}>
         <Providers>
